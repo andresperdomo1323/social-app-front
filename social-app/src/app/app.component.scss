@@ -1,0 +1,22 @@
+.html, body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.condiciones {
+  font-size: 8px;
+  line-height: 1;
+
+}
+.boton-verde {
+  background-color: #97B592;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.error-message {
+  color: red;
+  font-size: 10px;
+}
