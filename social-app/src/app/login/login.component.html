@@ -35,25 +35,20 @@
         <div class="email">
           <mat-form-field>
             <mat-label>Correo</mat-label>
-            <input formControlName="email" placeholder="Ingresa tu correo"
-              matInput type="email" required>
-            <!-- <mat-error *ngIf="this.fc.pass.invalid">Ingrese Información</mat-error> -->
-        </mat-form-field>
-          <!-- <label>Correo</label>
-          <input type="email" id="email" formControlName="email" placeholder="Ingresa tu correo" />
-          <div *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched"> -->
-            <!-- El correo es obligatorio. -->
-          </div>
-        <div class="inputFormDiv">
-          <mat-form-field>
-              <mat-label>Contraseña</mat-label>
-              <input formControlName="password" placeholder="Contraseña"
-                  [type]="!hide ? 'password' : 'text'" matInput type="password" required>
-              <button mat-icon-button matSuffix type="button" color="primary" class="btnEye" (click)="hide = !hide">
-                  <i [ngClass]="{'fa fa-eye-slash':!hide, 'fa-solid fa-eye btn-eye':hide}"></i>
-              </button>
-              <!-- <mat-error *ngIf="this.fc.pass.invalid">Ingrese Información</mat-error> -->
+            <input formControlName="email" placeholder="Ingresa tu correo" matInput type="email" required>
+            <mat-error *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">El correo es obligatorio.</mat-error>
           </mat-form-field>
+
+          <div class="inputFormDiv">
+            <mat-form-field>
+              <mat-label>Contraseña</mat-label>
+              <input formControlName="password" placeholder="Contraseña" [type]="!hide ? 'password' : 'text'" matInput type="password" required>
+              <button mat-icon-button matSuffix type="button" color="primary" class="btnEye" (click)="hide = !hide">
+                <i [ngClass]="{'fa fa-eye-slash':!hide, 'fa-solid fa-eye btn-eye':hide}"></i>
+              </button>
+              <mat-error *ngIf="form.get('password')?.hasError('required')">La contraseña es obligatoria.</mat-error>
+            </mat-form-field>
+          </div>
       </div>
       <button type="submit" class="btn btn-primary botonIniciarSesion">Iniciar sesión</button>
     </form>

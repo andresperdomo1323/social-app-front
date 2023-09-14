@@ -8,34 +8,33 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   hide: boolean = false;
+  form: FormGroup = this.formBuilder.group({}); // Inicializa form en el constructor
 
-  form : FormGroup = this.fb.group({
-    email: ['', Validators.required],
-    password: ['', Validators.required]
-  });
-
-  constructor(private fb: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    // You can perform additional initialization here if needed
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
+    });
   }
 
   onSubmit() {
-    // if (this.for) {
-    //   const usernameControl = this.loginForm.get('username');
-    //   const passwordControl = this.loginForm.get('password');
+    if (this.form.valid) {
+      const emailControl = this.form.get('email');
+      const passwordControl = this.form.get('password');
 
-    //   if (usernameControl && passwordControl) {
-    //     const username = usernameControl.value;
-    //     const password = passwordControl.value;
+      if (emailControl && passwordControl) {
+        const email = emailControl.value;
+        const password = passwordControl.value;
 
-    //     // Now you can use username and password
-    //     // ...perform your login logic here
-    // //   }
-    // }
+        // Ahora puedes usar email y password para realizar la lógica de inicio de sesión
+        // ...
+      }
+    }
   }
 
-  get fc(){
-    return this.form.controls
+  get fc() {
+    return this.form.controls;
   }
 }
