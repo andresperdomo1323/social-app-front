@@ -1,0 +1,70 @@
+.loginPrincipal{
+  display: flex;
+  height: 100vh;
+  --bs-gutter-x: 0rem;
+}
+
+.logo{
+  width: 15%;
+  margin-left: 35%;
+}
+
+h4{
+  text-align: center;
+  margin-top: 6%;
+}
+
+.indicadores{
+  width: 55%;
+}
+
+.carousel-indicators button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+
+.loginContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.styleImagen{
+  height: 100vh;
+
+}
+
+.btn-eye{
+  width: 2%;
+}
+
+.botonLogin{
+    margin-left: 0;
+    width: 100%;
+    background-color:rgba(31, 173, 31, 0.678);
+    border: 0;
+    margin-top: 0.5em;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+button{
+  margin: 20px;
+}
+
+.btnEye{
+  margin: 0;
+}
+
+.containerFormulario{
+  width: 45%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.formulario{
+  width: 100%;
+  margin: 0 13%;
+}
