@@ -6,10 +6,13 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./../../app.component.scss']
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  typeBtn: 'button' | 'reset' | 'submit' = 'button';
 
+  btnDisable = true;
+  
   get email() {
     return this.registerForm.get('email') as FormControl;
   }
