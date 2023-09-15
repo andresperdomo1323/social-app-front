@@ -1,12 +1,14 @@
-.html, body {
+html, body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: rgb(212, 221, 212);
 }
 
 .condiciones {
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1;
-
+  text-align: center;
 }
+
 .boton-verde {
   background-color: #97B592;
   color: white;
@@ -16,7 +18,30 @@
   font-size: 16px;
   cursor: pointer;
 }
-.error-message {
+
+
+.mat-error {
   color: red;
-  font-size: 10px;
+  font-size: 12px;
+}
+
+.logop {
+  width: 100px;
+  height: auto;
+}
+
+.googleSign, .googlePlay {
+  border: none;
+}
+
+.googlePlay img {
+  width: 80px;
+  height: auto;
+}
+.border-none {
+  border: none;
+}
+.btnEye{
+  border: none;
+  color: rgb(104, 104, 104);
 }
