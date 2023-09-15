@@ -9,35 +9,13 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  typeBtn: 'button' | 'reset' | 'submit' = 'button';
+  hide: boolean = false;
 
-  btnDisable = true;
-  
-  get email() {
-    return this.registerForm.get('email') as FormControl;
-  }
-  get name() {
-    return this.registerForm.get('name') as FormControl;
-  }
-  get username() {
-    return this.registerForm.get('username') as FormControl;
-  }
-  get password() {
-    return this.registerForm.get('password') as FormControl;
-  }
-  get password2() {
-    return this.registerForm.get('password2') as FormControl;
-  }
-
-  registerForm = new FormGroup({
-  'email': new FormControl('', [Validators.required, Validators.email]),
-  'name': new FormControl('', Validators.required),
-  'username': new FormControl('', Validators.required),
-  'password': new FormControl('', Validators.required),
-  'password2': new FormControl('', Validators.required),
-
-
-
+  form = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email]],
+    name: ['', [Validators.required]],
+    username: ['', [Validators.required]],
+    password: ['', [Validators.required]],
   });
 
   constructor(private formBuilder: FormBuilder) {}
@@ -46,6 +24,18 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.form.valid) {
+      const emailControl = this.form.get('email');
+      const nameControl = this.form.get('name');
+      const usernameControl = this.form.get('username');
+      const passwordControl = this.form.get('password');
 
+      if (emailControl && passwordControl) {
+        const email = emailControl.value;
+        const password = passwordControl.value;
+
+      }
+    }
   }
+
 }
