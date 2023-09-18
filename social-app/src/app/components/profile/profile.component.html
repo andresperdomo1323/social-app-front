@@ -1,0 +1,54 @@
+<div class="container text-center mt-4">
+  <img src="assets/images/Random.jpg" alt="Foto de perfil" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
+  <h2>{{ userProfile.username }}</h2>
+  <p>{{ userProfile.name }}</p>
+  <p>Email: {{ userProfile.email }}</p>
+  <p>Intereses: {{ userProfile.interests }}</p>
+  <button type="button" class="btn btn-secondary">Editar perfil</button>
+</div>
+
+<div class="container mt-4">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#publicaciones">Publicaciones</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#seguidores">Seguidores</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#seguidos">Seguidos</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="publicaciones" class="tab-pane fade show active">
+      <div class="container mt-3">
+        <h3>Publicaciones</h3>
+        <ul>
+          <li>Publicación 1</li>
+          <li>Publicación 2</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="seguidores" class="tab-pane fade">
+      <div class="container mt-3">
+        <h3>Seguidores</h3>
+        <ul>
+          <li>Seguidor 1</li>
+          <li>Seguidor 2</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="seguidos" class="tab-pane fade">
+      <div class="container mt-3">
+        <h3>Seguidos</h3>
+        <ul>
+          <li>Usuario seguido 1</li>
+          <li>Usuario seguido 2</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

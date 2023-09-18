@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="register.component.css">
-</head>
-<body>
-  <div class="bg-gray-800">
+ <div class="principal">
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-md-4 bg-white rounded p-4">
@@ -22,20 +16,25 @@
             </button>
           </div>
 
-          <div class="text-center mt-4">
-            <h3 class="text-sm">o</h3>
+          <div class="text-center mt-2">
+            <p class="text-sm">o</p>
             <h3 class="font-semibold text-xs">Crea tu cuenta</h3>
           </div>
 
-          <form [formGroup]="form" class="formulario">
-            <div class="email">
-              <mat-form-field>
-                <input formControlName="email" placeholder="Ingresa tu correo" matInput type="email" required>
-                <mat-error *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">El correo es obligatorio.</mat-error>
-              </mat-form-field>
+          <form [formGroup]="form" class="formulario mt-1">
+            <div>
               <mat-form-field>
                 <input formControlName="name" placeholder="Nombre" matInput type="text" required>
                 <mat-error *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">El nombre es obligatorio.</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input formControlName="lastname" placeholder="Apellido" matInput type="text" required>
+                <mat-error *ngIf="form.get('lastname')?.hasError('required') && form.get('lastname')?.touched">El apellido es obligatorio.</mat-error>
+              </mat-form-field>
+              <mat-form-field>
+                <input formControlName="email" placeholder="Ingresa tu correo" matInput type="email" required>
+                <mat-error *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">El correo es obligatorio.</mat-error>
+                <mat-error *ngIf="form.get('email')?.hasError('email') && form.get('email')?.touched">El correo no es válido.</mat-error>
               </mat-form-field>
               <mat-form-field>
                 <input formControlName="username" placeholder="Nombre de usuario" matInput type="text" required>
@@ -65,9 +64,9 @@
             <a href="#" style="display: inline">Entra</a>
           </div>
 
-          <div class="text-center mt-4">
+          <div class="text-center mt-2">
             <h5 class="text-xs">Descarga la aplicación</h5>
-            <button type="button" class="w-35 bg-transparent border-none mx-auto">
+            <button type="button" class="bg-transparent border-none mx-auto">
               <img src="/assets/images/disponible-en-google-play-badge.svg" alt="googlePlay" class="w-32" />
             </button>
           </div>
@@ -75,5 +74,3 @@
       </div>
     </div>
   </div>
-</body>
-</html>

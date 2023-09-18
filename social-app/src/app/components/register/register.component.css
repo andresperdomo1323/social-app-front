@@ -1,6 +1,5 @@
-html, body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: rgb(212, 221, 212);
+.principal {
+  background: #bfd4bc;
 }
 
 .condiciones {
@@ -18,8 +17,9 @@ html, body {
   font-size: 16px;
   cursor: pointer;
 }
-
-
+.formulario {
+  margin-bottom: 3px;
+}
 .mat-error {
   color: red;
   font-size: 12px;
@@ -35,7 +35,7 @@ html, body {
 }
 
 .googlePlay img {
-  width: 80px;
+  width: 40px;
   height: auto;
 }
 .border-none {
