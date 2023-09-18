@@ -3,6 +3,12 @@
   margin-left: 10%;
 }
 
+.navbarcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .social-app{
 width: 40%;
 
@@ -14,6 +20,69 @@ width: 40%;
 }
 
 .navbarcontainer{
-  background-color:#97B592;;
+  background-color:#97B592;
 }
 
+.cuenta{
+  padding-left: 3%;
+}
+
+.notificaciones{
+  padding-left: 3%;
+}
+
+.buscar{
+  padding-left: 61%;
+  border-radius: 2%;
+}
+
+.btnbuscar{
+  background-color: #19530f8a;
+  color: white;
+}
+
+.configuracion{
+    margin-left: 5%;
+    background-color: #19530f8a;
+    border: none;
+}
+
+.container-noticias{
+  text-align: center;
+  border-color: 1px solid,
+}
+
+.sugerencias{
+ background-color: #90dd8350;
+ height: 100vh;
+ border-right: 1px solid #bce7b5e3;
+ border-top: 1px solid #bce7b5e3;
+ border-bottom: 1px solid #bce7b5e3;
+ font-size: 17px;
+}
+
+.noticias{
+  font-size: 17px;
+  height: 100vh;
+  border-right: 1px solid #bce7b5e3;
+  border-top: 1px solid #bce7b5e3;
+}
+
+.chat{
+  height: 100vh;
+  border-right: 1px solid #bce7b5e3;
+  border-top: 1px solid #bce7b5e3;
+}
+
+h2{
+  border-bottom: 1px solid #bce7b5e3;
+}
+
+.menunavbar{
+  background-color:#97B592;
+}
+
+.configuracionnavbar{
+  font-size: 20px;
+  color: white;
+}
