@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/register/register.component';
 import { MatInputModule } from '@angular/material/input';
 import { ProfileComponent } from './components/profile/profile.component';
+import { SettingComponent } from './components/setting/setting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,

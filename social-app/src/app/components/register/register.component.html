@@ -2,15 +2,15 @@
     <div class="container">
       <div class="row justify-content-center align-items-center">
         <div class="col-md-4 bg-white rounded p-4">
-          <header class="text-center mb-4">
+          <header class="text-center mb-4 md:w-1/6">
             <img class="logop" src="/assets/images/medios-de-comunicacion-social.png" alt="logo" />
           </header>
 
           <div class="text-center mb-4">
-            <img class="w-1/3 md:w-1/3 sm:w-1/3" src="/assets/images/social-app-low-resolution-logo-color-on-transparent-background 7.png" alt="logo" />
+            <img class="w-1/3 md:w-1/4 sm:w-1/3" src="/assets/images/social-app-low-resolution-logo-color-on-transparent-background 7.png" alt="logo" />
           </div>
 
-          <div class="text-center mt-4">
+          <div class="text-center mt-2">
             <button type="submit" class="w-40 bg-transparent border-none">
               <img src="/assets/images/btn_google_signin_light_normal_web.png" alt="Google" class="w-40" />
             </button>
@@ -21,9 +21,9 @@
             <h3 class="font-semibold text-xs">Crea tu cuenta</h3>
           </div>
 
-          <form [formGroup]="form" class="formulario mt-1">
+          <form [formGroup]="form">
             <div>
-              <mat-form-field>
+              <mat-form-field class>
                 <input formControlName="name" placeholder="Nombre" matInput type="text" required>
                 <mat-error *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">El nombre es obligatorio.</mat-error>
               </mat-form-field>
