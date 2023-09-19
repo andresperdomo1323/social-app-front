@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/register/register.component';
+import { PublicationsComponent } from './components/publications/publications.component';
 import { MatInputModule } from '@angular/material/input';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SettingComponent } from './components/setting/setting.component';
@@ -14,6 +15,7 @@ import { SettingComponent } from './components/setting/setting.component';
   declarations: [
     AppComponent,
     RegisterComponent,
+    PublicationsComponent,
     ProfileComponent,
     SettingComponent
   ],
