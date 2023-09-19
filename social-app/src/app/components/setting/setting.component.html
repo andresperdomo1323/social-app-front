@@ -1,38 +1,69 @@
-<div class="container my-4">
+<div class="container my-4 custom-container">
   <div class="row">
-    <div class="col-md-4 photo">
-      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid img-movil rounded-circle">
+    <div class="col-md-4 photo d-flex flex-column align-items-center">
+      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid img-movil rounded-circle" style="max-width: 300px; max-height: 300px;">
       <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="cambiarFoto()">Cambiar Foto</button>
     </div>
     <div class="col-md-8">
-      <h2>Información de Perfil</h2>
-      <form>
-        <div class="form-group mb-3">
-          <label for="nombre">Nombre:</label>
-          <input type="text" class="form-control" id="nombre" [(ngModel)]="user.name">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="guardado-tab" data-toggle="tab" href="#guardado" role="tab">Publicaciones Guardadas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="configuracion-tab" data-toggle="tab" href="#configuracion" role="tab">Configuración y Privacidad</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="ayuda-tab" data-toggle="tab" href="#ayuda" role="tab">Ayuda y Soporte</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="perfil" role="tabpanel">
+          <h2 class="mt-3">Perfil</h2>
+          <form>
+            <div class="form-group mb-3">
+              <label for="nombre">Nombre:</label>
+              <input type="text" class="form-control" id="nombre" [(ngModel)]="user.name">
+            </div>
+            <div class="form-group mb-3">
+              <label for="apellido">Apellido:</label>
+              <input type="text" class="form-control" id="apellido" [(ngModel)]="user.lastname">
+            </div>
+            <div class="form-group  mb-3">
+              <label for="usuario">Nombre de Usuario:</label>
+              <input type="text" class="form-control" id="usuario" [(ngModel)]="user.username">
+            </div>
+            <div class="form-group mb-3">
+              <label for="contrasena">Contraseña:</label>
+              <input type="password" class="form-control" id="contrasena" [(ngModel)]="user.password">
+            </div>
+            <div class="form-group mb-3">
+              <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+              <input type="date" class="form-control" id="fechaNacimiento" [(ngModel)]="user.birthdate">
+            </div>
+            <div class="form-group mb-3">
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" class="form-control" id="telefono" [(ngModel)]="user.phone">
+            </div>
+            <div class="form-group mb-3">
+              <label for="intereses">Intereses:</label>
+              <input type="text" class="form-control" id="intereses" [(ngModel)]="user.interests">
+            </div>
+            <button type="submit" class="boton-verde d-grid gap-2 col-6 mx-auto mt-4">Guardar Cambios</button>
+          </form>
         </div>
-        <div class="form-group mb-3">
-          <label for="apellido">Apellido:</label>
-          <input type="text" class="form-control" id="apellido" [(ngModel)]="user.lastname">
+        <div class="tab-pane fade" id="guardado" role="tabpanel">
+          <h1>Publicaciones Guardadas</h1>
         </div>
-        <div class="form-group  mb-3">
-          <label for="usuario">Nombre de Usuario:</label>
-          <input type="text" class="form-control" id="usuario" [(ngModel)]="user.username">
+        <div class="tab-pane fade" id="configuracion" role="tabpanel">
+          <h3>Configuración y Privacidad</h3>
         </div>
-        <div class="form-group mb-3">
-          <label for="contrasena">Contraseña:</label>
-          <input type="password" class="form-control" id="contrasena" [(ngModel)]="user.password">
+        <div class="tab-pane fade" id="ayuda" role="tabpanel">
+          <h3>Ayuda y Soporte</h3>
         </div>
-        <div class="form-group mb-3">
-          <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-          <input type="date" class="form-control" id="fechaNacimiento" [(ngModel)]="user.birthdate">
-        </div>
-        <div class="form-group mb-3">
-          <label for="telefono">Teléfono:</label>
-          <input type="tel" class="form-control" id="telefono" [(ngModel)]="user.phone">
-        </div>
-        <button type="submit" class="boton-verde d-grid gap-2 col-6 mx-auto mt-4">Guardar Cambios</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

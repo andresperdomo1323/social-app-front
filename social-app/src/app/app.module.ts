@@ -10,6 +10,7 @@ import { PublicationsComponent } from './components/publications/publications.co
 import { MatInputModule } from '@angular/material/input';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SettingComponent } from './components/setting/setting.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SettingComponent } from './components/setting/setting.component';
     CoreModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

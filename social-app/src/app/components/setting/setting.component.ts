@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
-  styleUrls: ['./setting.component.scss']
+  styleUrls: ['./setting.component.css']
 })
 export class SettingComponent {
   user = {
@@ -13,7 +13,8 @@ export class SettingComponent {
     username: '',
     password: '',
     birthdate: '',
-    phone: ''
+    phone: '',
+    interests: '',
   };
 
   cambiarFoto() {
