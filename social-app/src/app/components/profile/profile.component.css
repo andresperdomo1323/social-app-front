@@ -7,3 +7,9 @@
   font-size: 16px;
   cursor: pointer;
 }
+.boton-verde:hover {
+  background-color: #357a38;
+}
+.colorb {
+  color: #97B592;
+}

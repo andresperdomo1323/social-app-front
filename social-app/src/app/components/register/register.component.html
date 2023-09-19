@@ -23,7 +23,7 @@
 
           <form [formGroup]="form">
             <div>
-              <mat-form-field class>
+              <mat-form-field>
                 <input formControlName="name" placeholder="Nombre" matInput type="text" required>
                 <mat-error *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">El nombre es obligatorio.</mat-error>
               </mat-form-field>
@@ -32,7 +32,7 @@
                 <mat-error *ngIf="form.get('lastname')?.hasError('required') && form.get('lastname')?.touched">El apellido es obligatorio.</mat-error>
               </mat-form-field>
               <mat-form-field>
-                <input formControlName="email" placeholder="Ingresa tu correo" matInput type="email" required>
+                <input formControlName="email" placeholder="Correo electrónico" matInput type="email" required>
                 <mat-error *ngIf="form.get('email')?.hasError('required') && form.get('email')?.touched">El correo es obligatorio.</mat-error>
                 <mat-error *ngIf="form.get('email')?.hasError('email') && form.get('email')?.touched">El correo no es válido.</mat-error>
               </mat-form-field>

@@ -1,5 +1,5 @@
 .principal {
-  background: #bfd4bc;
+  background: #d8e9d6;
 }
 
 .condiciones {
@@ -16,6 +16,10 @@
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.boton-verde:hover {
+  background-color: #357a38;
 }
 
 .logop {
