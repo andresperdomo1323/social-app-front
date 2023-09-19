@@ -1,5 +1,9 @@
+
 .body {
   background: rgb(212, 221, 212);
+}
+.principal {
+  background: #bfd4bc;
 }
 
 .condiciones {
@@ -18,12 +22,6 @@
   cursor: pointer;
 }
 
-
-.mat-error {
-  color: red;
-  font-size: 12px;
-}
-
 .logop {
   width: 100px;
   height: auto;
@@ -34,7 +32,7 @@
 }
 
 .googlePlay img {
-  width: 80px;
+  width: 40px;
   height: auto;
 }
 .border-none {
@@ -43,4 +41,7 @@
 .btnEye{
   border: none;
   color: rgb(104, 104, 104);
+}
+.formulario {
+  margin: 2px;
 }
