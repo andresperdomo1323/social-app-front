@@ -5,19 +5,15 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RegisterComponent } from './components/register/register.component';
-import { PublicationsComponent } from './components/publications/publications.component';
 import { MatInputModule } from '@angular/material/input';
-import { ProfileComponent } from './components/profile/profile.component';
-import { SettingComponent } from './components/setting/setting.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MaterialModule } from './core/material/material.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent,
-    PublicationsComponent,
-    ProfileComponent,
-    SettingComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -26,9 +22,15 @@ import { SettingComponent } from './components/setting/setting.component';
     CoreModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MaterialModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

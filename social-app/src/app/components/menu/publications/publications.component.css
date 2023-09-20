@@ -1,0 +1,44 @@
+
+.container-noticias{
+  text-align: center;
+  border-color: 1px solid,
+}
+
+.sugerencias{
+ background-color: #90dd8350;
+ height: 100vh;
+ border-right: 1px solid #bce7b5e3;
+ border-top: 1px solid #bce7b5e3;
+ border-bottom: 1px solid #bce7b5e3;
+ font-size: 17px;
+}
+
+.noticias{
+  font-size: 17px;
+  height: 100vh;
+  border-right: 1px solid #bce7b5e3;
+  border-top: 1px solid #bce7b5e3;
+}
+
+.imgprofile{
+  height: 10%;
+  border-radius: 100%;
+  float: left;
+  margin-left: 30px;
+}
+
+.nombusu{
+  float: left;
+  margin-left: 10px;
+}
+
+.chat{
+  height: 100vh;
+  border-right: 1px solid #bce7b5e3;
+  border-top: 1px solid #bce7b5e3;
+}
+
+h2{
+  border-bottom: 1px solid #bce7b5e3;
+}
+

@@ -1,0 +1,71 @@
+.logo{
+  width: 20%;
+  margin-left: 10%;
+}
+
+a{
+  cursor: pointer;
+}
+
+.navbarcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-app{
+width: 40%;
+
+}
+
+.logo-social{
+  display: grid;
+  width: 16%;
+}
+
+.navbarcontainer{
+  background-color:#97B592;
+}
+
+.cuenta{
+  padding-left: 3%;
+}
+
+.notificaciones{
+  padding-left: 3%;
+}
+
+.buscar{
+  padding-left: 61%;
+  border-radius: 2%;
+}
+
+.btnbuscar{
+  background-color: #19530f8a;
+  color: white;
+}
+
+.configuracion{
+    margin-left: 5%;
+    background-color: #19530f8a;
+    border: none;
+    display: flex;
+}
+
+.iconConfig{
+  line-height: 1.5;
+  margin-left: 0.2em;
+}
+
+.menunavbar{
+  background-color:#bce7b5e3;
+}
+
+.imgconfiguracion{
+  width: 15%;
+  opacity: 55%;
+}
+
+.listaConfiguracion{
+  list-style: none;
+}
