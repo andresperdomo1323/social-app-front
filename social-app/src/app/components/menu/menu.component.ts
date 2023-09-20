@@ -24,4 +24,8 @@ export class MenuComponent {
   cerrarSesion(){
     this.router.navigateByUrl('')
   }
+
+  editarPerfil(){
+    this.router.navigateByUrl('/menu/setting')
+  }
 }

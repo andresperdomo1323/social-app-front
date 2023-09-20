@@ -27,9 +27,18 @@
   margin-left: 30px;
 }
 
-.nombusu{
-  float: left;
-  margin-left: 10px;
+.id{
+
+  margin-left: 2px;
+}
+
+.photo-id{
+  width: 70%;
+  padding-left: 5px;
+}
+
+.hours{
+  text-align: left;
 }
 
 .chat{
