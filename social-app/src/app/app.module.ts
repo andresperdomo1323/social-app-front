@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MenuComponent } from './components/menu/menu.component';
 import { MaterialModule } from './core/material/material.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MaterialModule
+    MaterialModule,
+    MatTabsModule
   ],
   providers: [
     {

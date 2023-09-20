@@ -7,3 +7,32 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+.boton-verde:hover {
+  background-color: #357a38;
+}
+.custom-container {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+@media (max-width: 767px) {
+  .photo {
+    text-align: center;
+    height: 100%;
+  }
+
+  .img-movil {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.bg-primary {
+  color: #357a38;
+}
+
+a {
+  background-color: #97B592;
+  color: white;
+}
