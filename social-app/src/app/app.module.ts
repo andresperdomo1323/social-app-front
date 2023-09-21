@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
-import { MenuComponent } from './components/menu/menu.component';
 import { MaterialModule } from './core/material/material.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [

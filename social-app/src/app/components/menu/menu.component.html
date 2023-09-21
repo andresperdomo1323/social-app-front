@@ -37,7 +37,7 @@
                 <input class="me-2 " type="search" placeholder="Buscar..." aria-label="Search">
                 <button class="btn btn-outline-success btnbuscar" type="submit">Buscar</button>
               </form>
-              <button class="btn btn-primary configuracion" type="button" data-bs-toggle="offcanvas"
+              <button class="btn btn-outline-success configuracion" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 Configuración<i class="fa-solid fa-gear iconConfig"></i>
               </button>
@@ -60,8 +60,8 @@
       <div class="offcanvas-body">
         <!-- Contenido del menú Offcanvas -->
         <ul class="list-group listaConfiguracion">
-          <li class="list-group-item">Perfil</li>
-          <li class="list-group-item">Guardado</li>
+          <li><a class="list-group-item" (click)="editarPerfil()">Editar perfil</a></li>
+          <li class="list-group-item">Publicaciones guardadas</li>
           <li class="list-group-item">Configuración y privacidad</li>
           <li class="list-group-item">Ayuda y soporte</li>
           <hr>
@@ -70,13 +70,13 @@
         </ul>
       </div>
     </div>
-    <section>
-      <div>
-        <router-outlet></router-outlet>
-      </div>
-    </section>
-    <footer>
-      <p>Todos los derechos reservados</p>
-    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<section>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</section>
+<footer class="footer">
+  <p>{{year}} Todos los derechos reservados</p>
+</footer>

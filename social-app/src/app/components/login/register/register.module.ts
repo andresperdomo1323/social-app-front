@@ -5,15 +5,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterRoutingModule } from './register-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { RegisterComponent } from './register.component';
 
 
 
 
 @NgModule({
-  declarations: [
-    RegisterComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     MaterialModule,
