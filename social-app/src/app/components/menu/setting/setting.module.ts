@@ -10,7 +10,9 @@ import { SettingComponent } from './setting.component';
 
 
 @NgModule({
-  declarations: [SettingComponent],
+  declarations: [
+    SettingComponent
+  ],
   imports: [
     CommonModule,
     SettingRoutingModule,
