@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent {
 
+  // variable de año en curso
+  year: any;
+  today = new Date();
+
   constructor( private router:Router) {}
 
   ngOnInit(): void {
+    this.year = this.today.getFullYear();
   }
 
   inicio(){

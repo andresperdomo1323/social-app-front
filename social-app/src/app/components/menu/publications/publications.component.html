@@ -5,15 +5,21 @@
   </div>
   <div class="col-md-8 noticias">
     <p>Últimas noticias</p>
-    <div>
-      <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imgprofile">
-      <p class="id"><b>Usuario</b> Usuario </p>
-      <h6 class="hours">3h</h6>
-      <p></p>
-      <img src="/assets/photo-usuario.jpeg" alt="photo-id" class="photo-id">
+    <div class="noticiasPrincipales">
+      <div >
+        <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imgProfile">
+      </div>
+      <div class="subNotificaciones">
+        <p (click)="perfil()"><b>Usuario</b> Usuario </p>
+        <p>3h</p>
+        <p># Vacaciones</p>
+        <p class="parrrafoFour">Some where</p>
+        <img src="/assets/photo-usuario.jpeg" alt="photo-id" class="photo-id">
+      </div>
     </div>
   </div>
   <div class="col-md-2 chat">
     <p>Chat</p>
   </div>
 </div>
+

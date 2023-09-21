@@ -70,3 +70,15 @@ width: 40%;
 .listaConfiguracion{
   list-style: none;
 }
+
+/* css footer */
+
+.footer{
+  text-align: center;
+  line-height: 1.5;
+  background-color: #97B592;
+}
+
+.footer p{
+  margin: 0;
+}

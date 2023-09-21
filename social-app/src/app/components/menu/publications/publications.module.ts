@@ -8,9 +8,7 @@ import { PublicationsRoutingModule } from './publications-routing.module';
 
 
 @NgModule({
-  declarations: [
-    
-  ],
+  declarations: [PublicationsComponent],
   imports: [
     CommonModule,
     PublicationsRoutingModule,

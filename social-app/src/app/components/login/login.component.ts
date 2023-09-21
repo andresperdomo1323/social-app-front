@@ -40,4 +40,8 @@ export class LoginComponent implements OnInit {
   get fc() {
     return this.form.controls;
   }
+
+  register(){
+    this.router.navigateByUrl('/register')
+  }
 }
