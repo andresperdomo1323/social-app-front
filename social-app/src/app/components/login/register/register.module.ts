@@ -3,17 +3,21 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterRoutingModule } from './register-routing.module';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     MaterialModule,
     RegisterRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule,
+    MatFormFieldModule
   ]
 })
 export class RegisterModule { }

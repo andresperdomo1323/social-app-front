@@ -5,24 +5,12 @@
       <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="cambiarFoto()">Cambiar Foto</button>
     </div>
     <div class="col-md-8">
-
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" id="perfil-tab" data-toggle="tab" href="#perfil" role="tab">Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="guardado-tab" data-toggle="tab" href="#guardado" role="tab">Publicaciones Guardadas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="configuracion-tab" data-toggle="tab" href="#configuracion" role="tab">Configuración y Privacidad</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="ayuda-tab" data-toggle="tab" href="#ayuda" role="tab">Ayuda y Soporte</a>
-        </li>
-      </ul>
-      <div class="tab-content">
-        <div class="tab-pane fade show active" id="perfil" role="tabpanel">
-          <h2 class="mt-3">Perfil</h2>
+      <mat-tab-group>
+        <mat-tab label="Pestaña 1">
+          <ng-template mat-tab-label>
+            <span>Perfil</span>
+          </ng-template>
+          <p>Perfil</p>
           <form>
             <div class="form-group mb-3">
               <label for="nombre">Nombre:</label>
@@ -54,17 +42,30 @@
             </div>
             <button type="submit" class="boton-verde d-grid gap-2 col-6 mx-auto mt-4">Guardar Cambios</button>
           </form>
-        </div>
-        <div class="tab-pane fade" id="guardado" role="tabpanel">
-          <h1>Publicaciones Guardadas</h1>
-        </div>
-        <div class="tab-pane fade" id="configuracion" role="tabpanel">
-          <h3>Configuración y Privacidad</h3>
-        </div>
-        <div class="tab-pane fade" id="ayuda" role="tabpanel">
-          <h3>Ayuda y Soporte</h3>
-        </div>
-      </div>
+        </mat-tab>
+
+        <mat-tab label="Pestaña 2">
+          <ng-template mat-tab-label>
+            <span>Publicaciones Guardadas</span>
+          </ng-template>
+          <p>Contenido de la Pestaña 2</p>
+        </mat-tab>
+
+        <mat-tab label="Pestaña 3">
+          <ng-template mat-tab-label>
+            <span>Configuración y privacidad</span>
+          </ng-template>
+          <p>Contenido de la Pestaña 3</p>
+        </mat-tab>
+
+        <mat-tab label="Pestaña 4">
+          <ng-template mat-tab-label>
+            <span>Ayuda y soporte</span>
+          </ng-template>
+          <p>Contenido de la Pestaña 4</p>
+        </mat-tab>
+      </mat-tab-group>
+
     </div>
   </div>
 </div>

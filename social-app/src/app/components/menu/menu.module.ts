@@ -4,6 +4,8 @@ import { MenuRoutingModule } from './menu-routing.module';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatTabsModule } from '@angular/material/tabs';
+
 
 
 
@@ -14,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuRoutingModule,
     MaterialModule,
     CoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTabsModule
   ]
 })
 export class MenuModule { }
