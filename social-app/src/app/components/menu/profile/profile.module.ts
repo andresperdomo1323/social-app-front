@@ -4,6 +4,8 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { ProfileComponent } from './profile.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 
 
 @NgModule({
@@ -14,7 +16,8 @@ import { ProfileComponent } from './profile.component';
     CommonModule,
     ProfileRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonToggleModule
 
   ]
 })

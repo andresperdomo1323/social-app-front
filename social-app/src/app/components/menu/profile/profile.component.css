@@ -10,10 +10,16 @@
 .boton-verde:hover {
   background-color: #357a38;
 }
-.colorb {
-  color: #97B592;
+
+.pestañas {
+  margin: 0 100px;
 }
-a {
-  background-color: #97B592;
-  color: white;
+p {
+  color: rgb(131, 121, 102);
+}
+h2 {
+  color: rgb(95, 92, 89);
+}
+.hidden-toggle-group {
+  display: none;
 }
