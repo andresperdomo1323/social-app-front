@@ -6,18 +6,38 @@
   <div class="col-md-8 noticias">
     <p>Últimas noticias</p>
     <div class="noticiasPrincipales">
-      <div >
+      <div>
         <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imgProfile">
       </div>
       <div class="subNotificaciones">
         <p (click)="perfil()"><b>Usuario</b> Usuario </p>
-        <p>3h</p>
+        <p class="hours">3h</p>
         <p>#Vacaciones</p>
-        <p class="music">Somewhere Over The Rainbow</p>
+        <p class="music"><i class="fa-solid fa-music music"></i> Somewhere Over The Rainbow</p>
         <img src="/assets/photo-usuario.jpeg" alt="photo-id" class="photo-id">
-      </div>
-      <div>
-        <i class="fa-regular fa-heart heart"></i><p>100 Me gusta</p>
+        <div>
+          <i class="fa-regular fa-heart heart"></i>
+          <span class="like">100 Me gusta</span>
+          <i class="fa-regular fa-comment comment"></i>
+          <span class="like">100 Me gusta</span>
+          <i class="fa-regular fa-star star"></i>
+          <span class="like">2</span>
+          <i class="fa-solid fa-share share"></i>
+          <span class="like">3</span>
+          <i class="fa-regular fa-bookmark bookmark"></i>
+          <span class="like">1</span>
+          <hr>
+          <span class="like">Ver más comentarios...</span>
+          <hr>
+          <div class="container-img">
+            <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imageProfile">
+            <div>
+              <p (click)="perfil()"><b>Usuario2</b> Usuario2 </p>
+              <p class="hours">2h</p>
+            </div>
+          </div>
+          <img src="/assets/emoji.png" alt="emoji" class="emoji">
+        </div>
       </div>
     </div>
   </div>
@@ -25,4 +45,3 @@
     <p>Chat</p>
   </div>
 </div>
-

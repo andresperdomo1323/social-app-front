@@ -34,11 +34,7 @@
 }
 
 .subNotificaciones p{
-  margin: 0.5em 0 0;
-}
-
-.music{
-  margin: 0.5em 0 0.5em 2em !important;
+  margin: 0.1em;
 }
 
 .photo-id{
@@ -48,11 +44,14 @@
 
 .imgProfile{
   position: absolute;
-  width: 100px;
+  width: 70px;
   left: 15em;
   border-radius: 50%;
 }
 
+.nombUsu{
+  color: rgb(185, 185, 185);
+}
 
 .chat{
   height: 100vh;
@@ -64,9 +63,63 @@ h2{
   border-bottom: 1px solid #bce7b5e3;
 }
 
+.hours{
+  color: rgb(185, 185, 185);
+}
+
+.music{
+  color: rgb(151, 149, 149);
+  margin: 0em 0 0.5em 0em !important;
+}
+
 .heart{
-  
-  position: absolute;
-  left: 23em;
-  padding-top: 5px;
+  font-size: 21px;
+  padding-top: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+.like{
+  margin-left: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+.comment{
+  font-size: 20px;
+  margin-left: 1em;
+  color: rgb(185, 185, 185);
+}
+
+.star{
+  margin-left: 9em;
+  color: rgb(185, 185, 185);
+}
+
+.share{
+  margin-left: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+.bookmark{
+  margin-left: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+hr{
+margin: 0.5em;
+}
+
+.imageProfile{
+  width: 50px;
+  left: 15em;
+  border-radius: 50%;
+}
+
+.container-img{
+  display: flex;
+  margin: 1em;
+}
+
+.emoji{
+  width: 50px;;
+
 }
