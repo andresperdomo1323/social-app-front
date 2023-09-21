@@ -33,4 +33,8 @@ export class MenuComponent {
   editarPerfil(){
     this.router.navigateByUrl('/menu/setting')
   }
+
+  publicacionesGuardadas(){
+    this.router.navigateByUrl('/menu/setting')
+  }
 }
