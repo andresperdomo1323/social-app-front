@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterRoutingModule } from './register-routing.module';
+import { FormsModule } from '@angular/forms';
+import { FormlyModule } from '@ngx-formly/core';
 
 
 
@@ -13,7 +15,9 @@ import { RegisterRoutingModule } from './register-routing.module';
     CommonModule,
     MaterialModule,
     RegisterRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormlyModule,
+    FormsModule,
   ]
 })
 export class RegisterModule { }

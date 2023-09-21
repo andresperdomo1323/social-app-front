@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators,  } from '@angular/forms';
+import { RegisterService } from '../../services/register.service';
+import { User } from '../../models/user.models';
+import { Router } from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-register',
@@ -7,35 +13,49 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  hide: boolean = false;
+  submitted: boolean = false;
+  userForm: FormGroup = new FormGroup({});
 
-  form = this.formBuilder.group({
-    name: ['', [Validators.required]],
-    lastname: ['', [Validators.required]],
-    email: ['', [Validators.required, Validators.email]],
-    username: ['', [Validators.required]],
-    password: ['', [Validators.required]],
-  });
+  constructor(
+    private formBuilder: FormBuilder,
+    private registerService: RegisterService,
+    private router: Router
 
-  constructor(private formBuilder: FormBuilder) {}
+    ) {
+      this.buildForm();
+    }
+
+
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    if (this.form.valid) {
-      const nameControl = this.form.get('name');
-      const lastnameControl = this.form.get('lastname');
-      const emailControl = this.form.get('email');
-      const usernameControl = this.form.get('username');
-      const passwordControl = this.form.get('password');
 
-      if (emailControl && passwordControl) {
-        const email = emailControl.value;
-        const password = passwordControl.value;
-
-      }
+  onSubmit(event: Event) {
+    this.submitted = true;
+    event.preventDefault();
+    if(this.userForm.valid){
+      const user = this.userForm.value;
+      this.registerService.createUser(user)
+      .subscribe((newUser: User) => {
+        console.log(newUser);
+        this.router.navigate(['./login']);
+      })
     }
+
+    this.userForm.reset();
+
+  }
+
+  private buildForm() {
+    this.userForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email],],
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+      role: ['user', [Validators.required]],
+    });
   }
 
 }

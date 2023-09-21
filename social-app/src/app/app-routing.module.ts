@@ -22,6 +22,7 @@ const routes: Routes = [
     path: 'setting',
     component: SettingComponent
   },
+  
 ];
 
 @NgModule({

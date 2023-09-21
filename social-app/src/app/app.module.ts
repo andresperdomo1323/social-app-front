@@ -9,13 +9,16 @@ import { RegisterComponent } from './components/register/register.component';
 import { MatInputModule } from '@angular/material/input';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SettingComponent } from './components/setting/setting.component';
+import { UserComponent } from './components/user/user.component';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     ProfileComponent,
-    SettingComponent
+    SettingComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { SettingComponent } from './components/setting/setting.component';
     CoreModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
