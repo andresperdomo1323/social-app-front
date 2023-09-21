@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../models/user.models';
-import { RegisterService } from 'src/app/services/register.service';
+import { UsersService } from 'src/app/services/users.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private registerService: RegisterService,
+    private usersService: UsersService,
     private router: Router
     ) {
       this.buildForm();
@@ -33,9 +32,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-
-
-
     if (this.form.valid) {
       const emailControl = this.form.get('email');
       const passwordControl = this.form.get('password');
@@ -44,7 +40,7 @@ export class LoginComponent implements OnInit {
         const email = emailControl.value;
         const password = passwordControl.value;
 
-        const res = this.registerService.login(this.form.value)
+        const res = this.usersService.login(this.form.value)
         .subscribe((res: any) => {
           console.log(res);
           localStorage.setItem('token', res.token);
@@ -52,9 +48,11 @@ export class LoginComponent implements OnInit {
 
       }
     }
+    this.form.reset();
   }
 
   get fc() {
     return this.form.controls;
   }
+  
 }

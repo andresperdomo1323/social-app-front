@@ -9,9 +9,23 @@ export class UsersService {
 
   private url = 'http://localhost:3000/api/users';
 
+
   constructor(
-    private http: HttpClient
-  ) { }
+    private http: HttpClient,
+    ) {
+    }
+
+    createUser(user: User) {
+      return this.http.post<User>(this.url, user );
+    }
+
+    getAll(){
+      return this.http.get<User[]>(this.url);
+    }
+
+    login(form: any) {
+      return this.http.post<any>(`${this.url}/login`,form);
+    }
 
 
 

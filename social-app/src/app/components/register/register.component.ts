@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,  } from '@angular/forms';
-import { RegisterService } from '../../services/register.service';
+import { UsersService } from 'src/app/services/users.service';
 import { User } from '../../models/user.models';
 import { Router } from '@angular/router';
 
@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private registerService: RegisterService,
+    private usersService: UsersService,
     private router: Router
 
     ) {
@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
     event.preventDefault();
     if(this.userForm.valid){
       const user = this.userForm.value;
-      this.registerService.createUser(user)
+      this.usersService.createUser(user)
       .subscribe((newUser: User) => {
         console.log(newUser);
         this.router.navigate(['./login']);
