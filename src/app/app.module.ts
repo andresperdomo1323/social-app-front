@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatTableModule } from '@angular/material/table';
+
 import { CoreModule } from './core/core.module';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +12,9 @@ import { PublicationsComponent } from './components/publications/publications.co
 import { MatInputModule } from '@angular/material/input';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SettingComponent } from './components/setting/setting.component';
+import { TableUsersComponent } from './components/table-users/table-users.component';
+import { TableModule } from './modules/table/table.module';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,9 @@ import { SettingComponent } from './components/setting/setting.component';
     RegisterComponent,
     PublicationsComponent,
     ProfileComponent,
-    SettingComponent
+    SettingComponent,
+    TableUsersComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,10 @@ import { SettingComponent } from './components/setting/setting.component';
     CoreModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    TableModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

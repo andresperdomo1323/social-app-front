@@ -4,7 +4,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { PublicationsComponent } from './components/publications/publications.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SettingComponent } from './components/setting/setting.component';
-
+import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
   {
@@ -27,6 +27,11 @@ const routes: Routes = [
     path: 'setting',
     component: SettingComponent
   },
+  {
+    path: 'admin',
+    component: UsersComponent
+  },
+
 ];
 
 @NgModule({
