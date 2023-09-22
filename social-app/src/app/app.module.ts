@@ -10,11 +10,16 @@ import { MaterialModule } from './core/material/material.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MenuComponent } from './components/menu/menu.component';
+import { RegisterComponent } from './components/login/register/register.component'
+import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,13 +30,16 @@ import { MenuComponent } from './components/menu/menu.component';
     ReactiveFormsModule,
     MatInputModule,
     MaterialModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule
   ],
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
+      useClass: HashLocationStrategy,
+
     }
+
   ],
   bootstrap: [AppComponent]
 })
