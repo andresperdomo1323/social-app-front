@@ -11,6 +11,7 @@ export class SettingComponent {
   formS = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]],
+    passwordc: ['', [Validators.required]],
     name: ['', [Validators.required]],
     lastname: ['', [Validators.required]],
     username: ['', [Validators.required]],
@@ -24,6 +25,6 @@ export class SettingComponent {
   }
 
   cambiarFoto() {
-    // Poner aca el metodo para que el usuario pueda actualizar la foto de perfil
+    // Poner aca el metodo para que el usuario pueda cambiar la foto de perfil
   }
 }

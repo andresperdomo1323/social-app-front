@@ -33,4 +33,5 @@ export class MenuComponent {
   editarPerfil(){
     this.router.navigateByUrl('/menu/setting')
   }
+
 }

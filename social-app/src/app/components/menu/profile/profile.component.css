@@ -20,6 +20,18 @@ p {
 h2 {
   color: rgb(95, 92, 89);
 }
-.hidden-toggle-group {
+.group {
   display: none;
+}
+@media (max-width: 768px) {
+  span {
+    font-size: 14px;
+  }
+  .pestañas {
+    margin: 0 10px;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

@@ -1,4 +1,4 @@
-<div class="container text-center mt-4">
+<div class="container-fluid text-center mt-4">
   <img src="assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid rounded-circle" style="max-width: 150px; height: auto;">
   <h2 class="mt-4">{{ userProfile.username }}</h2>
   <p>{{ userProfile.name }}</p>
@@ -7,14 +7,14 @@
   <button type="button" class="boton-verde d-block mx-auto mt-3">Editar perfil</button>
 </div>
 
-<div class="hidden-toggle-group" style="display: none;">
+<div class="group" style="display: none;">
   <mat-button-toggle-group #colorToggle="matButtonToggleGroup"
                            value="accent"
                            aria-label="Change color">
     <mat-button-toggle value="accent">Accent</mat-button-toggle>
   </mat-button-toggle-group>
 </div>
-<div class="hidden-toggle-group" style="display: none;">
+<div class="group" style="display: none;">
   <mat-button-toggle-group #backgroundColorToggle="matButtonToggleGroup"
                            value="primary"
                            aria-label="Change color">

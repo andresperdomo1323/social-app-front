@@ -1,15 +1,18 @@
 <div class="row container-noticias">
-  <div class="col-md-2 sugerencias">
+  <div class="col-md-2 sugerencias col-lg-2 col-xl-2 d-none d-md-block">
     <p>Sugerencias</p>
-
   </div>
-  <div class="col-md-8 noticias">
+  <div class="col-12 col-md-8 noticias">
     <p>Últimas noticias</p>
-    <div class="noticiasPrincipales">
-      <div >
-        <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imgProfile">
-      </div>
-      <div class="subNotificaciones">
+    <div class="row">
+    <div class="avatar-container col-2">
+      <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="avatar">
+    </div>
+    <div class="noticiasPrincipales col-10">
+
+      <div class="col-md-8 subNotificaciones">
+
+        <div class="perfil-info">
         <p (click)="perfil()"><b>Usuario</b> Usuario </p>
         <p>3h</p>
         <p># Vacaciones</p>
@@ -18,8 +21,10 @@
       </div>
     </div>
   </div>
-  <div class="col-md-2 chat">
+</div>
+</div>
+  <div class="col-md-2 chat col-lg-2 col-xl-2 d-none d-md-block">
     <p>Chat</p>
   </div>
-</div>
 
+</div>

@@ -20,7 +20,9 @@
   border-right: 1px solid #bce7b5e3;
   border-top: 1px solid #bce7b5e3;
 }
-
+.perfil-info p {
+  margin: 1px 0;
+}
 /* css noticas */
 .noticiasPrincipales{
   overflow: auto;
@@ -28,13 +30,7 @@
 }
 
 .subNotificaciones{
-  width: 65%;
-  margin: auto;
   text-align: left;
-}
-
-.subNotificaciones p{
-  margin: 0.5em 0 0;
 }
 
 .parrrafoFour{
@@ -42,17 +38,18 @@
 }
 
 .photo-id{
-  width: 100%;
+  width: 120%;
   border-radius: 8px;
 }
 
-.imgProfile{
-  position: absolute;
+.avatar {
   width: 100px;
-  left: 15em;
   border-radius: 50%;
 }
-
+.avatar-container {
+  text-align: right;
+  padding: 0%;
+}
 
 .chat{
   height: 100vh;
@@ -64,3 +61,16 @@ h2{
   border-bottom: 1px solid #bce7b5e3;
 }
 
+
+@media (max-width: 767px) {
+  .photo-id{
+    width: 100%;
+  }
+  .subNotificaciones {
+    font-size: 0.8rem;
+  }
+  .avatar {
+    width: 80%;
+
+  }
+}
