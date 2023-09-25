@@ -55,9 +55,8 @@ height: 48px !important;
 
 }
 
-.mat-mdc-tab-body.mat-mdc-tab-body-active
-{
-  z-index: 0 !important;
+.mat-mdc-tab-body-wrapper {
+ z-index: 0 !important;
 }
 
 .mat-mdc-tab-label-container{

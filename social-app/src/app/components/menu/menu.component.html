@@ -20,17 +20,14 @@
                 <a class="nav-link" (click)="perfil()">Perfil</a>
               </li>
               <li class="nav-item dropdown notificaciones">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Notificaciones
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Noticación 1</a></li>
-                  <li><a class="dropdown-item" href="#">Noticación 2</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Noticación 3</a></li>
+                  <li><a class="dropdown-item" href="#">Notificación 1</a></li>
+                  <li><a class="dropdown-item" href="#">Notificación 2</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Notificación 3</a></li>
                 </ul>
               </li>
               <form class="d-flex buscar" role="search">
@@ -61,22 +58,22 @@
         <!-- Contenido del menú Offcanvas -->
         <ul class="list-group listaConfiguracion">
           <li><a class="list-group-item" (click)="editarPerfil()">Editar perfil</a></li>
-          <li class="list-group-item" (click)="publicacionesGuardadas()">Publicaciones guardadas</li>
-          <li class="list-group-item">Configuración y privacidad</li>
-          <li class="list-group-item">Ayuda y soporte</li>
+          <li class="list-group-item" (click)="publicaciones()" style="cursor: pointer;">Publicaciones guardadas</li>
+          <li class="list-group-item" (click)="configuracionPrivacidad()" style="cursor: pointer;">Configuración y privacidad</li>
+          <li class="list-group-item" (click)="ayudaySoporte()" style="cursor: pointer;">Ayuda y soporte</li>
           <hr>
           <li><a class="list-group-item" (click)="cerrarSesion()"><b>Cerrar sesión</b></a></li>
 
         </ul>
       </div>
     </div>
+    <section>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>{{year}} Todos los derechos reservados</p>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<section>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
-</section>
-<footer class="footer">
-  <p>{{year}} Todos los derechos reservados</p>
-</footer>

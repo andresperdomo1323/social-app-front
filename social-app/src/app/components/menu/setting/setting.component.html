@@ -1,69 +1,40 @@
 <div class="container my-4 custom-container">
   <div class="row">
     <div class="col-md-4 photo d-flex flex-column align-items-center">
-      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid img-movil rounded-circle" style="max-width: 300px; max-height: 300px;">
+      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil"
+        class="img-fluid img-movil rounded-circle" style="max-width: 300px; max-height: 300px;">
       <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="cambiarFoto()">Cambiar Foto</button>
     </div>
     <div class="col-md-8">
-      <mat-tab-group>
-        <mat-tab label="Pestaña 1">
+      <mat-tab-group #tabGroup>
+        <mat-tab label="tab1">
           <ng-template mat-tab-label>
             <span>Perfil</span>
           </ng-template>
-          <p>Perfil</p>
-          <form>
-            <div class="form-group mb-3">
-              <label for="nombre">Nombre:</label>
-              <input type="text" class="form-control" id="nombre">
-            </div>
-            <div class="form-group mb-3">
-              <label for="apellido">Apellido:</label>
-              <input type="text" class="form-control" id="apellido">
-            </div>
-            <div class="form-group  mb-3">
-              <label for="usuario">Nombre de Usuario:</label>
-              <input type="text" class="form-control" id="usuario">
-            </div>
-            <div class="form-group mb-3">
-              <label for="contrasena">Contraseña:</label>
-              <input type="password" class="form-control" id="contrasena">
-            </div>
-            <div class="form-group mb-3">
-              <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-              <input type="date" class="form-control" id="fechaNacimiento">
-            </div>
-            <div class="form-group mb-3">
-              <label for="telefono">Teléfono:</label>
-              <input type="tel" class="form-control" id="telefono">
-            </div>
-            <div class="form-group mb-3">
-              <label for="intereses">Intereses:</label>
-              <input type="text" class="form-control" id="intereses">
-            </div>
-            <button type="submit" class="boton-verde d-grid gap-2 col-6 mx-auto mt-4">Guardar Cambios</button>
-          </form>
+          <app-perfil-setting></app-perfil-setting>
         </mat-tab>
 
-        <mat-tab label="Pestaña 2">
+        <mat-tab label="tab2">
           <ng-template mat-tab-label>
             <span>Publicaciones Guardadas</span>
           </ng-template>
-          <p>Contenido de la Pestaña 2</p>
+          <app-publicaciones-guardadas-setting></app-publicaciones-guardadas-setting>
         </mat-tab>
 
-        <mat-tab label="Pestaña 3">
+        <mat-tab label="tab3">
           <ng-template mat-tab-label>
             <span>Configuración y privacidad</span>
           </ng-template>
-          <p>Contenido de la Pestaña 3</p>
+          <app-configuracion-setting></app-configuracion-setting>
         </mat-tab>
 
-        <mat-tab label="Pestaña 4">
+        <mat-tab label="tab4">
           <ng-template mat-tab-label>
             <span>Ayuda y soporte</span>
           </ng-template>
           <p>Contenido de la Pestaña 4</p>
         </mat-tab>
+        <app-ayudaysoporte-setting></app-ayudaysoporte-setting>
       </mat-tab-group>
 
     </div>

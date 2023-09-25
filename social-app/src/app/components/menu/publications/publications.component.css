@@ -110,7 +110,6 @@ margin: 0.5em;
 
 .imageProfile{
   width: 50px;
-  left: 15em;
   border-radius: 50%;
 }
 
@@ -121,5 +120,5 @@ margin: 0.5em;
 
 .emoji{
   width: 50px;;
-
+  margin-left: 5em;
 }

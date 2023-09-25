@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import Popper from 'popper.js';
 
 @Component({
   selector: 'app-menu',
@@ -20,10 +21,16 @@ export class MenuComponent {
 
   inicio(){
     this.router.navigateByUrl('/menu/publications')
+    setTimeout(() => {
+      window.location.reload()
+    }, 20);
   }
 
   perfil(){
     this.router.navigateByUrl('/menu/profile')
+    setTimeout(() => {
+      window.location.reload()
+    }, 20);
   }
 
   cerrarSesion(){
@@ -31,10 +38,30 @@ export class MenuComponent {
   }
 
   editarPerfil(){
-    this.router.navigateByUrl('/menu/setting')
+    this.router.navigateByUrl('/menu/setting/0')
+    setTimeout(() => {
+      window.location.reload()
+    }, 50);
   }
 
-  publicacionesGuardadas(){
-    this.router.navigateByUrl('/menu/setting')
+  publicaciones(){
+    this.router.navigateByUrl(`/menu/setting/1`)
+    setTimeout(() => {
+      window.location.reload()
+    }, 50);
+  }
+
+  configuracionPrivacidad(){
+    this.router.navigateByUrl(`/menu/setting/2`)
+    setTimeout(() => {
+      window.location.reload()
+    }, 50);
+  }
+
+  ayudaySoporte(){
+    this.router.navigateByUrl(`/menu/setting/3`)
+    setTimeout(() => {
+      window.location.reload()
+    }, 50);
   }
 }
