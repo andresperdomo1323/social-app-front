@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import Popper from 'popper.js';
 
 @Component({
   selector: 'app-menu',
