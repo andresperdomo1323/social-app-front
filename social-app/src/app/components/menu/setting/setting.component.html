@@ -8,89 +8,93 @@
     <div class="col-md-8">
       <mat-tab-group #tabGroup>
         <mat-tab label="tab1">
-    <div class="col-md-4 avatar d-flex flex-column align-items-center">
-      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid img-movil rounded-circle" style="max-width: 50%; max-height: 300px;">
-      <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="cambiarFoto()">Cambiar Foto</button>
-    </div>
-    <div class="col-md-8">
-      <mat-tab-group color="warn">
-        <mat-tab class="word-break">
-          <ng-template mat-tab-label>
-            <span style="font-weight: bold;">Perfil</span>
-          </ng-template>
-          <app-perfil-setting></app-perfil-setting>
-        </mat-tab>
+          <div class="col-md-4 avatar d-flex flex-column align-items-center">
+            <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil"
+              class="img-fluid img-movil rounded-circle" style="max-width: 50%; max-height: 300px;">
+            <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="cambiarFoto()">Cambiar Foto</button>
+          </div>
+          <div class="col-md-8">
+            <mat-tab-group color="warn">
+              <mat-tab class="word-break">
+                <ng-template mat-tab-label>
+                  <span style="font-weight: bold;">Perfil</span>
+                </ng-template>
+                <app-perfil-setting></app-perfil-setting>
+              </mat-tab>
 
-        <mat-tab label="tab2">
-          <p class="my-3" style="font-weight: bold;">Perfil</p>
-          <form>
-            <div class="form-group mb-3">
-              <label for="name" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group mb-3">
-              <label for="lastname" class="form-label">Apellido:</label>
-              <input type="text" class="form-control" id="lastname">
-            </div>
-            <div class="form-group  mb-3">
-              <label for="user" class="form-label">Nombre de Usuario:</label>
-              <input type="text" class="form-control" id="user">
-            </div>
-            <div class="form-group mb-3">
-              <label for="password" class="form-label">Contraseña:</label>
-              <input type="password" class="form-control" id="password">
-            </div>
-            <div class="form-group mb-3">
-              <label for="passwordc" class="form-label">Confirmación contraseña:</label>
-              <input type="password" class="form-control" id="passwordc">
-            </div>
-            <div class="form-group mb-3">
-              <label for="birthdate" class="form-label">Fecha de Nacimiento:</label>
-              <input type="date" class="form-control" id="birthdate">
-            </div>
-            <div class="form-group mb-3">
-              <label for="phone" class="form-label">Teléfono:</label>
-              <input type="tel" class="form-control" id="phone">
-            </div>
-            <div class="form-group mb-3">
-              <label for="interests" class="form-label">Intereses:</label>
-              <input type="text" class="form-control" id="interests">
-            </div>
-            <button type="submit" class="boton-verde d-grid gap-2 col-6 mx-auto mt-4">Guardar Cambios</button>
-          </form>
-        </mat-tab>
+              <mat-tab label="tab2">
+                <p class="my-3" style="font-weight: bold;">Perfil</p>
+                <form>
+                  <div class="form-group mb-3">
+                    <label for="name" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="lastname" class="form-label">Apellido:</label>
+                    <input type="text" class="form-control" id="lastname">
+                  </div>
+                  <div class="form-group  mb-3">
+                    <label for="user" class="form-label">Nombre de Usuario:</label>
+                    <input type="text" class="form-control" id="user">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="password" class="form-label">Contraseña:</label>
+                    <input type="password" class="form-control" id="password">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="passwordc" class="form-label">Confirmación contraseña:</label>
+                    <input type="password" class="form-control" id="passwordc">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="birthdate" class="form-label">Fecha de Nacimiento:</label>
+                    <input type="date" class="form-control" id="birthdate">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="phone" class="form-label">Teléfono:</label>
+                    <input type="tel" class="form-control" id="phone">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="interests" class="form-label">Intereses:</label>
+                    <input type="text" class="form-control" id="interests">
+                  </div>
+                  <button type="submit" class="boton-verde d-grid gap-2 col-6 mx-auto mt-4">Guardar Cambios</button>
+                </form>
+              </mat-tab>
 
-        <mat-tab class="word-break">
-          <ng-template mat-tab-label>
-            <span style="font-weight: bold;">Publicaciones<br>guardadas</span>
-          </ng-template>
-          <app-publicaciones-guardadas-setting></app-publicaciones-guardadas-setting>
-        </mat-tab>
+              <mat-tab class="word-break">
+                <ng-template mat-tab-label>
+                  <span style="font-weight: bold;">Publicaciones<br>guardadas</span>
+                </ng-template>
+                <app-publicaciones-guardadas-setting></app-publicaciones-guardadas-setting>
+              </mat-tab>
 
-        <mat-tab label="tab3">
-          <p style="font-weight: bold;">Contenido Pestaña 2</p>
-        </mat-tab>
+              <mat-tab label="tab3">
+                <p style="font-weight: bold;">Contenido Pestaña 2</p>
+              </mat-tab>
 
-        <mat-tab class="word-break">
-          <ng-template mat-tab-label>
-            <span style="font-weight: bold;">Configuración<br>y<br>privacidad</span>
-          </ng-template>
-          <app-configuracion-setting></app-configuracion-setting>
-        </mat-tab>
+              <mat-tab class="word-break">
+                <ng-template mat-tab-label>
+                  <span style="font-weight: bold;">Configuración<br>y<br>privacidad</span>
+                </ng-template>
+                <app-configuracion-setting></app-configuracion-setting>
+              </mat-tab>
 
-        <mat-tab label="tab4">
-          <p style="font-weight: bold;">Contenido Pestaña 2</p>
-        </mat-tab>
+              <mat-tab label="tab4">
+                <p style="font-weight: bold;">Contenido Pestaña 2</p>
+              </mat-tab>
 
-        <mat-tab class="word-break">
-          <ng-template mat-tab-label>
-            <span style="font-weight: bold;">Ayuda<br>y<br>soporte</span>
-          </ng-template>
-          <p style="font-weight: bold;">Contenido Pestaña 2</p>
+              <mat-tab class="word-break">
+                <ng-template mat-tab-label>
+                  <span style="font-weight: bold;">Ayuda<br>y<br>soporte</span>
+                </ng-template>
+                <p style="font-weight: bold;">Contenido Pestaña 2</p>
+              </mat-tab>
+              <app-ayudaysoporte-setting></app-ayudaysoporte-setting>
+            </mat-tab-group>
+
+          </div>
         </mat-tab>
-        <app-ayudaysoporte-setting></app-ayudaysoporte-setting>
       </mat-tab-group>
-
     </div>
   </div>
 </div>
