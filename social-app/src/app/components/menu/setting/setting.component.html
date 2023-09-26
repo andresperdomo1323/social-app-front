@@ -1,15 +1,8 @@
 <div class="container my-4 custom-container">
   <div class="row">
-    <div class="col-md-4 photo d-flex flex-column align-items-center">
-      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil"
-        class="img-fluid img-movil rounded-circle" style="max-width: 300px; max-height: 300px;">
-      <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="cambiarFoto()">Cambiar Foto</button>
-    </div>
-    <div class="col-md-8">
-      <mat-tab-group #tabGroup>
-        <mat-tab label="tab1">
     <div class="col-md-4 avatar d-flex flex-column align-items-center">
-      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid img-movil rounded-circle" style="max-width: 50%; max-height: 300px;">
+      <img src="./assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil"
+      class="img-fluid img-movil rounded-circle" style="max-width: 50%; max-height: 300px;">
       <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="cambiarFoto()">Cambiar Foto</button>
     </div>
     <div class="col-md-8">
@@ -19,10 +12,7 @@
             <span style="font-weight: bold;">Perfil</span>
           </ng-template>
           <app-perfil-setting></app-perfil-setting>
-        </mat-tab>
 
-        <mat-tab label="tab2">
-          <p class="my-3" style="font-weight: bold;">Perfil</p>
           <form>
             <div class="form-group mb-3">
               <label for="name" class="form-label">Nombre:</label>
@@ -32,6 +22,7 @@
               <label for="lastname" class="form-label">Apellido:</label>
               <input type="text" class="form-control" id="lastname">
             </div>
+
             <div class="form-group  mb-3">
               <label for="user" class="form-label">Nombre de Usuario:</label>
               <input type="text" class="form-control" id="user">
@@ -65,10 +56,7 @@
             <span style="font-weight: bold;">Publicaciones<br>guardadas</span>
           </ng-template>
           <app-publicaciones-guardadas-setting></app-publicaciones-guardadas-setting>
-        </mat-tab>
 
-        <mat-tab label="tab3">
-          <p style="font-weight: bold;">Contenido Pestaña 2</p>
         </mat-tab>
 
         <mat-tab class="word-break">
@@ -76,19 +64,16 @@
             <span style="font-weight: bold;">Configuración<br>y<br>privacidad</span>
           </ng-template>
           <app-configuracion-setting></app-configuracion-setting>
-        </mat-tab>
 
-        <mat-tab label="tab4">
-          <p style="font-weight: bold;">Contenido Pestaña 2</p>
         </mat-tab>
 
         <mat-tab class="word-break">
           <ng-template mat-tab-label>
             <span style="font-weight: bold;">Ayuda<br>y<br>soporte</span>
           </ng-template>
-          <p style="font-weight: bold;">Contenido Pestaña 2</p>
+          <app-ayudaysoporte-setting></app-ayudaysoporte-setting>
+
         </mat-tab>
-        <app-ayudaysoporte-setting></app-ayudaysoporte-setting>
       </mat-tab-group>
 
     </div>
