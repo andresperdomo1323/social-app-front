@@ -7,7 +7,7 @@
 }
 
 .condiciones {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1;
   text-align: center;
 }
@@ -48,4 +48,7 @@
 }
 .formulario {
   margin: 2px;
+}
+.gp {
+  height: 50px;
 }

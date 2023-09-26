@@ -20,7 +20,9 @@
   border-right: 1px solid #bce7b5e3;
   border-top: 1px solid #bce7b5e3;
 }
-
+.perfil-info p {
+  margin: 1px 0;
+}
 /* css noticas */
 .noticiasPrincipales{
   overflow: auto;
@@ -28,17 +30,19 @@
 }
 
 .subNotificaciones{
-  width: 65%;
-  margin: auto;
   text-align: left;
 }
 
 .subNotificaciones p{
   margin: 0.1em;
 }
+.parrrafoFour{
+  margin: 0.5em 0 0.5em 2em !important;
+
+}
 
 .photo-id{
-  width: 100%;
+  width: 120%;
   border-radius: 8px;
 }
 
@@ -51,6 +55,15 @@
 
 .nombUsu{
   color: rgb(185, 185, 185);
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+}
+.avatar-container {
+  text-align: right;
+  padding: 0%;
 }
 
 .chat{
@@ -121,4 +134,17 @@ margin: 0.5em;
 .emoji{
   width: 50px;;
   margin-left: 5em;
+}
+
+@media (max-width: 767px) {
+  .photo-id{
+    width: 100%;
+  }
+  .subNotificaciones {
+    font-size: 0.8rem;
+  }
+  .avatar {
+    width: 80%;
+
+  }
 }

@@ -64,4 +64,5 @@ export class MenuComponent {
       window.location.reload()
     }, 50);
   }
+
 }

@@ -96,3 +96,9 @@ u{
 
 }
 
+@media screen and (max-width:500px){
+  .containerFormulario{
+    width: 100%;
+    align-items: center;
+  }
+}

@@ -9,6 +9,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MaterialModule } from './core/material/material.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
@@ -25,7 +27,8 @@ import { MenuComponent } from './components/menu/menu.component';
     ReactiveFormsModule,
     MatInputModule,
     MaterialModule,
-    MatTabsModule
+    MatTabsModule,
+    MatButtonToggleModule
   ],
   providers: [
     {

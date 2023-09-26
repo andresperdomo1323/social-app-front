@@ -17,16 +17,22 @@
   margin-right: 40px;
 }
 
-@media (max-width: 767px) {
-  .photo {
-    text-align: center;
-    height: 100%;
-  }
+@media (max-width: 768px) {
 
-  .img-movil {
-    max-width: 200px;
-    display: block;
-    margin: 0 auto;
+  .custom-container {
+    margin-left: 0px;
+  }
+  span {
+    font-size: small;
+  }
+  .word-break {
+    white-space: normal;
+  }
+  .form-control {
+    font-size: 14px;
+  }
+  .form-label {
+    font-size: 14px;
   }
 }
 
@@ -34,7 +40,3 @@
   color: #357a38;
 }
 
-a {
-  background-color: #97B592;
-  color: white;
-}

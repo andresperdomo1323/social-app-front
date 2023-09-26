@@ -11,6 +11,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class SettingComponent {
   type: any;
   @ViewChild('tabGroup')tabGroup!: MatTabGroup ;
+  formS = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required]],
+    passwordc: ['', [Validators.required]],
+    name: ['', [Validators.required]],
+    lastname: ['', [Validators.required]],
+    username: ['', [Validators.required]],
+    birthdate: ['', [Validators.required]],
+    phone: ['', [Validators.required]]
+  });
 
   constructor(private formBuilder: FormBuilder, private router:Router, private actRoute: ActivatedRoute) {
     this.type = this.actRoute.snapshot.params['type'];
@@ -27,6 +37,6 @@ export class SettingComponent {
 
 
   cambiarFoto() {
-    // Poner aca el metodo para que el usuario pueda actualizar la foto de perfil
+    // Poner aca el metodo para que el usuario pueda cambiar la foto de perfil
   }
 }
