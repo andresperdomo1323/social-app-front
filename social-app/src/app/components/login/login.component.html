@@ -31,7 +31,7 @@
       <h4>Bienvenidos</h4>
     </div>
     <div class="loginContainer">
-      <form [formGroup]="form" class="formulario">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="formulario">
         <div class="email">
           <mat-form-field>
             <mat-label>Correo</mat-label>

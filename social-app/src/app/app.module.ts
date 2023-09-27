@@ -12,11 +12,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { MenuComponent } from './components/menu/menu.component';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,13 +29,16 @@ import { MenuComponent } from './components/menu/menu.component';
     MatInputModule,
     MaterialModule,
     MatTabsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    HttpClientModule
   ],
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
+      useClass: HashLocationStrategy,
+
     }
+
   ],
   bootstrap: [AppComponent]
 })
