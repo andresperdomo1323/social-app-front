@@ -1,148 +1,233 @@
-
-.container-noticias{
+.container-noticias {
   text-align: center;
   border-color: 1px solid,
 }
 
-.sugerencias{
- background-color: #90dd8350;
- height: 100vh;
- border-right: 1px solid #bce7b5e3;
- border-top: 1px solid #bce7b5e3;
- border-bottom: 1px solid #bce7b5e3;
- font-size: 17px;
+.sugerencias {
+  background-color: #90dd8350;
+  height: 100vh;
+  border-right: 1px solid #bce7b5e3;
+  border-top: 1px solid #bce7b5e3;
+  border-bottom: 1px solid #bce7b5e3;
+  font-size: 17px;
 }
 
-.noticias{
+.nuevasolicitud {
+  text-align: left;
+  margin-top: 15px;
+  font-family: Times, "Times New Roman", Georgia, serif;
+}
+
+.imgprofilesug {
+  margin-bottom: 10px;
+  width: 60px;
+  border-radius: 50%;
+  border: 3px solid forestgreen;
+}
+
+.amigos {
+  margin-left: 4px;
+  margin-bottom: 0;
+  color: rgb(114, 114, 114);
+}
+
+.imageSug {
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid forestgreen;
+}
+
+.activo {
+  color: rgb(185, 185, 185);
+  margin-bottom: 0;
+}
+
+.btncomentarios{
+  color: rgb(185, 185, 185);
+  margin-left: 3.7em;
+  margin-top: 10px;
+}
+
+.nombAgregar {
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+
+.container-suger {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.nombSug {
+  margin-bottom: 0;
+}
+
+.btnagregar {
+  margin-left: 5.5em;
+}
+
+.btncancelar {
+  margin-left: 5px;
+}
+
+.noticias {
   font-size: 17px;
   height: 100vh;
   padding: 0;
   border-right: 1px solid #bce7b5e3;
   border-top: 1px solid #bce7b5e3;
 }
+
 .perfil-info p {
   margin: 1px 0;
 }
+
+.imgprofilesug2{
+  margin-bottom: 10px;
+  width: 60px;
+  border-radius: 50%;
+}
 /* css noticas */
-.noticiasPrincipales{
+.noticiasPrincipales {
   overflow: auto;
+  display: flex;
+  overflow-x: hidden;
   height: 90vh;
 }
 
-.subNotificaciones{
+.subNotificaciones {
   text-align: left;
 }
 
-.subNotificaciones p{
+.subNotificaciones p {
   margin: 0.1em;
 }
-.parrrafoFour{
-  margin: 0.5em 0 0.5em 2em !important;
 
+.parrrafoFour {
+  margin: 0.5em 0 0.5em 2em !important;
 }
 
-.photo-id{
-  width: 120%;
+.photo-id {
+  width: 98%;
   border-radius: 8px;
 }
 
-.imgProfile{
-  position: absolute;
+.nombUsu {
+  color: rgb(185, 185, 185);
+}
+
+.avatar {
   width: 70px;
   left: 15em;
   border-radius: 50%;
 }
 
-.nombUsu{
-  color: rgb(185, 185, 185);
-}
-
-.avatar {
-  width: 100px;
-  border-radius: 50%;
-}
 .avatar-container {
   text-align: right;
   padding: 0%;
 }
 
-.chat{
+.hourscoment {
+  color: rgb(185, 185, 185);
+  margin-left: 12px;
+}
+
+.chat {
   height: 100vh;
   border-right: 1px solid #bce7b5e3;
   border-top: 1px solid #bce7b5e3;
 }
 
-h2{
+h2 {
   border-bottom: 1px solid #bce7b5e3;
 }
 
-.hours{
+.hours {
   color: rgb(185, 185, 185);
+  margin-bottom: 4px;
 }
 
-.music{
+.music {
   color: rgb(151, 149, 149);
   margin: 0em 0 0.5em 0em !important;
 }
 
-.heart{
+.heart {
   font-size: 21px;
   padding-top: 0.5em;
   color: rgb(185, 185, 185);
 }
 
-.like{
+.like {
   margin-left: 0.5em;
   color: rgb(185, 185, 185);
 }
 
-.comment{
+.comment {
   font-size: 20px;
   margin-left: 1em;
   color: rgb(185, 185, 185);
 }
 
-.star{
+.star {
   margin-left: 9em;
   color: rgb(185, 185, 185);
 }
 
-.share{
+.share {
   margin-left: 0.5em;
   color: rgb(185, 185, 185);
 }
 
-.bookmark{
+.bookmark {
   margin-left: 0.5em;
   color: rgb(185, 185, 185);
 }
 
-hr{
-margin: 0.5em;
+hr {
+  margin: 0.5em;
 }
 
-.imageProfile{
+.imageProfile {
   width: 50px;
   border-radius: 50%;
 }
 
-.container-img{
+.container-img {
   display: flex;
-  margin: 1em;
+  margin-bottom: 0;
 }
 
-.emoji{
-  width: 50px;;
+.comentNomb {
+  margin-left: 11px;
+}
+
+.emoji {
+  width: 50px;
   margin-left: 5em;
 }
 
+.escribircoment{
+  outline: none;
+    box-sizing: border-box;
+    height: 33px;
+    padding-right: 59%;
+    color: rgb(185, 185, 185);
+    border-radius: 30px;
+    font-size: 15px;
+    border: 1px solid rgb(185, 185, 185);
+    transition: all .7s ease;
+}
+
 @media (max-width: 767px) {
-  .photo-id{
+  .photo-id {
     width: 100%;
   }
+
   .subNotificaciones {
     font-size: 0.8rem;
   }
+
   .avatar {
     width: 80%;
 

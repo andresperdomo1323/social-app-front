@@ -22,11 +22,12 @@ export class SettingComponent {
     phone: ['', [Validators.required]]
   });
 
+
   constructor(private formBuilder: FormBuilder, private router:Router, private actRoute: ActivatedRoute) {
     this.type = this.actRoute.snapshot.params['type'];
   }
 
-  ngAfterViewInit(): void { // Utiliza ngAfterViewInit en lugar de ngOnInit
+  ngAfterViewInit(): void {
     if(this.type > 0){
       this.tabGroup.selectedIndex = Number(this.type);
     }

@@ -1,73 +1,97 @@
 <div class="row container-noticias">
-  <div class="col-md-2 sugerencias col-lg-2 col-xl-2 d-none d-md-block">
-    <p>Sugerencias</p>
-    <div class="container-img">
-      <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imageProfile">
+  <div class="col-md-2 sugerencias">
+    <p class="nuevasolicitud">Nueva solicitud</p>
+    <div>
+      <div class="container-suger">
+        <img src="/assets/amigos2.webp" alt="imgprofile" class="imageSug">
+        <div>
+          <p class="nombAgregar"> Yemialadeof </p>
+          <p class="amigos">400 amigos</p>
+        </div>
+      </div>
       <div>
-        <p (click)="perfil()"><b>Usuario2</b> Usuario2 </p>
-        <p class="hours">2h</p>
+        <button type="button" class="btn btn-success btnagregar"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+          Agregar
+        </button>
+        <button type="button" class="btn btn-outline-success btncancelar"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+          Cancelar
+        </button>
+        <hr>
       </div>
     </div>
-    <div class="container-img">
-      <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imageProfile">
+    <div>
+      <div class="container-suger">
+        <img src="/assets/amigos3.jpg" alt="imgprofile" class="imageSug">
+        <div>
+          <p class="nombAgregar"> Yemialadeof </p>
+          <p class="amigos">400 amigos</p>
+        </div>
+      </div>
       <div>
-        <p (click)="perfil()"><b>Usuario2</b> Usuario2 </p>
-        <p class="hours">2h</p>
+        <button type="button" class="btn btn-success btnagregar"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+          Agregar
+        </button>
+        <button type="button" class="btn btn-outline-success btncancelar"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+          Cancelar
+        </button>
+        <hr>
       </div>
     </div>
-    <div class="container-img">
-      <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imageProfile">
-      <div>
-        <p (click)="perfil()"><b>Usuario2</b> Usuario2 </p>
-        <p class="hours">2h</p>
+    <div>
+      <div class="container-suger">
+        <img src="/assets/amigos4.jpeg" class="imgprofilesug">
+        <div>
+          <p class="nombAgregar"> Yemialadeof </p>
+          <p class="activo">Activo 1hr</p>
+        </div>
       </div>
     </div>
-    <div class="container-img">
-      <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imageProfile">
-      <div>
-        <p (click)="perfil()"><b>Usuario2</b> Usuario2 </p>
-        <p class="hours">2h</p>
+    <div>
+      <div class="container-suger">
+        <img src="/assets/amigos1.jpeg" class="imgprofilesug">
+        <div>
+          <p class="nombAgregar"> Yemialadeof </p>
+          <p class="activo">Activo 1hr</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container-suger">
+        <img src="/assets/amigos5.jpg" class="imgprofilesug">
+        <div>
+          <p class="nombAgregar"> Yemialadeof </p>
+          <p class="activo">Activo 1hr</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="container-suger">
+        <img src="/assets/amigos2.webp" class="imgprofilesug">
+        <div class="container-activo">
+          <p class="nombAgregar"> Yemialadeof </p>
+          <p class="activo">Activo 1hr</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-12 col-md-8 noticias">
+  <div class="col-md-8 noticias">
     <p>Últimas noticias</p>
-    <div class="collapse navbar-collapse inicio" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
-        <li class="nav-item dropdown notificaciones">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Notificaciones
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Notificación 1</a></li>
-            <li><a class="dropdown-item" href="#">Notificación 2</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Notificación 3</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
     <div class="noticiasPrincipales">
-      <div>
-        <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imgProfile">
+      <div class="col-2">
+        <img src="/assets/imagenPerfil.jpg" class="avatar">
       </div>
-      <div class="subNotificaciones">
-    <div class="row">
-    <div class="avatar-container col-2">
-      <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="avatar">
-    </div>
-    <div class="noticiasPrincipales col-10">
-
-      <div class="col-md-8 subNotificaciones">
-
+      <div class="subNotificaciones col-8">
         <div class="perfil-info">
-        <p (click)="perfil()"><b>Usuario</b> Usuario </p>
-        <p class="hours">3h</p>
+          <p (click)="perfil()"><b>Khusan Akhmedov</b></p>
+          <p class="hours">3h</p>
+        </div>
         <p>#Vacaciones</p>
         <p class="music"><i class="fa-solid fa-music music"></i> Somewhere Over The Rainbow</p>
-        <img src="/assets/photo-usuario.jpeg" alt="photo-id" class="photo-id">
+        <img src="/assets/photo-usuario.jpeg" class="photo-id">
         <div>
           <i class="fa-regular fa-heart heart"></i>
           <span class="like">100 Me gusta</span>
@@ -82,21 +106,26 @@
           <hr>
           <span class="like">Ver más comentarios...</span>
           <hr>
+
           <div class="container-img">
-            <img src="/assets/images/blank-profile-picture-973460_640.png" alt="imgprofile" class="imageProfile">
-            <div>
-              <p (click)="perfil()"><b>Usuario2</b> Usuario2 </p>
-              <p class="hours">2h</p>
+            <img src="/assets/amigos5.jpg" class="imgprofilesug">
+            <div class="comentNomb">
+              <p (click)="perfil()"><b>Yemialadeof</b></p>
+              <p class="activo">Hace 2h</p>
             </div>
           </div>
-          <img src="/assets/emoji.png" alt="emoji" class="emoji">
+          <img src="/assets/emoji.png" class="emoji">
         </div>
+        <div class="btncomentarios">
+        <button type="button" class="btn btn-online-secondary">Me gusta</button>
+        <button type="button" class="btn btn-online-secondary">Comentar</button>
+      </div>
+      <img src="/assets/imagenPerfil.jpg" class="imgprofilesug2">
+      <input type="text" placeholder="Escribe un comentario..." class="escribircoment"/>
       </div>
     </div>
   </div>
-</div>
-</div>
-  <div class="col-md-2 chat col-lg-2 col-xl-2 d-none d-md-block">
+  <div class="col-md-2 chat ">
     <p>Chat</p>
   </div>
 </div>

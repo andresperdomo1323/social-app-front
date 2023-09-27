@@ -21,9 +21,8 @@ const routes: Routes = [
     path: 'setting/:type',
     component: MenuComponent,
     loadChildren: () => import('./setting/setting.module').then(m => m.SettingModule)
-
   },
-  
+
   {
     path: '**',
     redirectTo: 'publications'
