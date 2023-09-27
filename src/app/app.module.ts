@@ -15,6 +15,7 @@ import { SettingComponent } from './components/setting/setting.component';
 import { TableUsersComponent } from './components/table-users/table-users.component';
 import { TableModule } from './modules/table/table.module';
 import { UsersComponent } from './pages/users/users.component';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { UsersComponent } from './pages/users/users.component';
     ReactiveFormsModule,
     MatInputModule,
     MatTableModule,
+    MatSortModule,
     TableModule,
 
   ],

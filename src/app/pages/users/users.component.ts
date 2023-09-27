@@ -96,6 +96,7 @@ export class UsersComponent implements OnInit {
   tableConfig: TableConfig = {
     isSelectable: true,
     isPaginable: true,
+    showFilter: true,
   }
 
   constructor() {}
@@ -106,6 +107,7 @@ export class UsersComponent implements OnInit {
 
   setTableColumns() {
     this.tableColumns = [
+      { label: 'Avatar', def: 'avatar', dataKey: 'avatar', dataType: 'image' },
       { label: 'No.', def: 'position', dataKey: 'position' },
       { label: 'Nombre', def: 'name', dataKey: 'name' },
       {

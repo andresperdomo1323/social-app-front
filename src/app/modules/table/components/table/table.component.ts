@@ -4,6 +4,8 @@ import { TableColumn } from '../../models/table-column';
 import { SelectionModel } from '@angular/cdk/collections';
 import { TableConfig } from '../../models/table-config';
 import { MatPaginator } from '@angular/material/paginator';
+import { filter } from 'rxjs';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-table',
@@ -11,20 +13,17 @@ import { MatPaginator } from '@angular/material/paginator';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit, AfterViewInit {
-  dataSource: MatTableDataSource<Array<any>> = new MatTableDataSource();
+  dataSource: MatTableDataSource<Array<any>> = new MatTableDataSource<any[]>([]);
   tableDisplayColumns: string[] = [];
   tableColumns: TableColumn[] = [];
   selection = new SelectionModel<any>(true, []);
   tableConfig: TableConfig | undefined;
+  currentFilterValue: string = '';
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-  }
-
   @Input() set data(data: Array<any>) {
-    this.dataSource = new MatTableDataSource(data);
+    this.dataSource.data = data;
     this.dataSource.paginator = this.paginator;
   }
 
@@ -39,7 +38,14 @@ export class TableComponent implements OnInit, AfterViewInit {
 
   @Output() select: EventEmitter<any> = new EventEmitter()
 
+  @ViewChild(MatSort) matSort!: MatSort
+
   constructor() {}
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.matSort
+  }
 
   ngOnInit(): void {}
 
@@ -82,4 +88,9 @@ export class TableComponent implements OnInit, AfterViewInit {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
   }
 
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.currentFilterValue = filterValue;
+  }
 }
