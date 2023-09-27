@@ -13,11 +13,15 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { RegisterComponent } from './components/login/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
