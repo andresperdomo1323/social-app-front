@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-profile',
