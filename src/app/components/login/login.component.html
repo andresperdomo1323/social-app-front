@@ -31,7 +31,7 @@
       <h4>Bienvenidos</h4>
     </div>
     <div class="loginContainer">
-      <form [formGroup]="form" class="formulario">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="formulario">
         <div class="email">
           <mat-form-field>
             <mat-label>Correo</mat-label>
@@ -50,7 +50,7 @@
             </mat-form-field>
           </div>
       </div>
-      <button type="submit" class="btn btn-primary botonIniciarSesion">Iniciar sesión</button>
+      <button (click)="login()" class="btn btn-primary botonIniciarSesion">Iniciar sesión</button>
     </form>
     <div>
     </div>
@@ -65,7 +65,7 @@
   </button>
   </div>
   <div class="CrearCuenta">
-    <p>¿Todavía no tienes una cuenta? <u>Crea una ahora</u></p>
+    <p>¿Todavía no tienes una cuenta? <u (click)="register()">Crea una ahora</u></p>
   </div>
   </div>
 </div>

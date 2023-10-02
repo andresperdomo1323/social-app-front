@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UsersService } from 'src/app/services/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +10,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   hide: boolean = false;
+  form: FormGroup = new FormGroup({});
 
-  form = this.formBuilder.group({
+  constructor(
+    private formBuilder: FormBuilder,
+    private usersService: UsersService,
+    private router: Router
+    ) {
+      this.buildForm();
+    }
+
+
+  private buildForm() {
+  this.form = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]],
   });
-
-  constructor(private formBuilder: FormBuilder) {}
+  }
 
   ngOnInit(): void {
   }
@@ -28,13 +40,24 @@ export class LoginComponent implements OnInit {
         const email = emailControl.value;
         const password = passwordControl.value;
 
-        // Ahora puedes usar email y password para realizar la lógica de inicio de sesión
-        // ...
+        const res = this.usersService.login(this.form.value)
+        .subscribe((res: any) => {
+          console.log(res);
+          localStorage.setItem('token', res.token);
+        });
+
       }
     }
+    this.form.reset();
   }
-
+  login(){
+    this.router.navigateByUrl('/menu')
+  }
   get fc() {
     return this.form.controls;
+  }
+
+  register(){
+    this.router.navigateByUrl('/register')
   }
 }
