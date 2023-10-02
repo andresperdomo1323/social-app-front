@@ -4,8 +4,7 @@ import { TableColumn } from '../../models/table-column';
 import { SelectionModel } from '@angular/cdk/collections';
 import { TableConfig } from '../../models/table-config';
 import { MatPaginator } from '@angular/material/paginator';
-import { filter } from 'rxjs';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, Sort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-table',
@@ -38,16 +37,16 @@ export class TableComponent implements OnInit, AfterViewInit {
 
   @Output() select: EventEmitter<any> = new EventEmitter()
 
-  @ViewChild(MatSort) matSort!: MatSort
+  @ViewChild(MatSort) matSort!: MatSort;
 
   constructor() {}
 
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.matSort
+    this.dataSource.sort = this.matSort;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {  }
 
   onSelect() {
     this.select.emit(this.selection.selected)
@@ -93,4 +92,6 @@ export class TableComponent implements OnInit, AfterViewInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
     this.currentFilterValue = filterValue;
   }
+
+  onSort(event: Sort): void {}
 }

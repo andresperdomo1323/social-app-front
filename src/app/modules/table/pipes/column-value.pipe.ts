@@ -32,7 +32,6 @@ export class ColumnValuePipe implements PipeTransform {
 
         displayValue = currentValue;
         break;
-
       default:
         break;
     }

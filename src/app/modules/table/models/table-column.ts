@@ -4,4 +4,6 @@ export interface TableColumn {
   dataKey: string;
   formatt?: string;
   dataType?: 'date' | 'object' | 'image';
+  sortable?: boolean;
+  hideColumnOnMobile: boolean;
 }
