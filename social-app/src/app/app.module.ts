@@ -13,13 +13,15 @@ import { MenuComponent } from './components/menu/menu.component';
 import { RegisterComponent } from './components/login/register/register.component'
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { ProfileComponent } from './components/menu/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

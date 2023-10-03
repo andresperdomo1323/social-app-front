@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators,  } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, AsyncValidatorFn  } from '@angular/forms';
 import { UsersService } from 'src/app/services/users.service';
 import { User } from '../../../models/user.models';
 import { Router } from '@angular/router';
-
-
-
+import { async, map, tap } from 'rxjs';
+import { validateUsername } from 'src/app/validators/validator';
 
 @Component({
   selector: 'app-register',
@@ -16,10 +15,14 @@ export class RegisterComponent implements OnInit {
   submitted: boolean = false;
   userForm: FormGroup = new FormGroup({});
 
+
+
   constructor(
     private formBuilder: FormBuilder,
     private usersService: UsersService,
-    private router: Router
+    private router: Router,
+
+
 
     ) {
       this.buildForm();
@@ -29,6 +32,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 
   onSubmit(event: Event) {
@@ -47,15 +51,20 @@ export class RegisterComponent implements OnInit {
 
   }
 
+
+
+
   private buildForm() {
     this.userForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email],],
-      username: ['', [Validators.required]],
+      username: ['', [Validators.required],validateUsername(this.usersService)],
       password: ['', [Validators.required]],
       role: ['user', [Validators.required]],
     });
   }
 
 }
+
+
