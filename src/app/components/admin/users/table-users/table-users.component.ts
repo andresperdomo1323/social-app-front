@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TableUsersComponent implements OnInit {
   dataSource: any = [];
-  tableDisplayColumns: string[] = [ 'position', 'avatar', 'name', 'birthdate', 'country', 'status'];
+  tableDisplayColumns: string[] = [ 'position', 'avatar', 'username', 'lastname', 'name', 'dateBirth', 'country', 'status'];
 
   @Input() set data(data: any) {
     this.dataSource = data;

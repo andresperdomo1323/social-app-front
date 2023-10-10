@@ -5,110 +5,140 @@ import { TableConfig } from 'src/app/modules/table/models/table-config';
 const USERS_DATA_MOCK = [
   {
     position: 1,
-    name: 'Pedro Pérez',
-    birthdate: new Date(2000, 0, 1),
+    username: 'pepe000000',
+    name: 'Pedro',
+    lastname: 'Pérez',
+    dateBirth: new Date(2000, 0, 1),
     country: 'España',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },
   {
     position: 2,
-    name: 'Maria Lopez',
-    birthdate: new Date(2001, 2, 1),
+    username: 'mama000000',
+    name: 'Maria',
+    lastname: 'Lopez',
+    dateBirth: new Date(2001, 2, 1),
     country: 'Grecia',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },
   {
     position: 3,
-    name: 'Alejandro Pinzón',
-    birthdate: new Date(1999, 5, 10),
+    username: 'alpi000000',
+    name: 'Alejandro',
+    lastname: 'Pinzón',
+    dateBirth: new Date(1999, 5, 10),
     country: 'Colombia',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'inactivo'
   },
   {
     position: 4,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'jero000000',
+    name: 'Jessica',
+    lastname: 'Roa',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },
   {
     position: 5,
-    name: 'Sofia Espinosa',
-    birthdate: new Date(2021, 1, 1),
+    username: 'soes000000',
+    name: 'Sofia',
+    lastname: 'Espinosa',
+    dateBirth: new Date(2021, 1, 1),
     country: 'Chile',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'inactivo'
   },  {
     position: 6,
-    name: 'Francisco Castro',
-    birthdate: new Date(1980, 12, 12),
+    username: 'frca000000',
+    name: 'Francisco',
+    lastname: 'Castro',
+    dateBirth: new Date(1980, 12, 12),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 7,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'liro00000',
+    name: 'Liliana',
+    lastname: 'Roa',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 8,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'date000000',
+    name: 'Dario',
+    lastname: 'Tellez',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 9,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'nesa000000',
+    name: 'Nelly',
+    lastname: 'Sanchez',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Inactivo'
   },  {
     position: 10,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'capu00000',
+    name: 'Carlos',
+    lastname: 'Pulido',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 11,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'mama000000',
+    name: 'Maria',
+    lastname: 'Martinez',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 12,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'anme000000',
+    name: 'Ana',
+    lastname: 'Mejia',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 13,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'pamo00000',
+    name: 'Pablo',
+    lastname: 'Molina',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 14,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'rogu00000',
+    name: 'Roberto',
+    lastname: 'Gutierrez',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
   },  {
     position: 15,
-    name: 'Jessica Roa',
-    birthdate: new Date(2000, 0, 1),
+    username: 'mabe000000',
+    name: 'Manuel',
+    lastname: 'Bello',
+    dateBirth: new Date(2000, 0, 1),
     country: 'Perú',
     avatar: 'https://material.angular.io/assets/img/examples/shiba1.jpg',
     status: 'Activo'
@@ -120,6 +150,7 @@ const USERS_DATA_MOCK = [
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
 })
+
 export class UsersComponent implements OnInit {
   usersList = USERS_DATA_MOCK;
   tableColumns: TableColumn[] = [];
@@ -139,11 +170,13 @@ export class UsersComponent implements OnInit {
     this.tableColumns = [
       { label: '', def: 'avatar', dataKey: 'avatar', dataType: 'image', hideColumnOnMobile: false },
       { label: 'No.', def: 'position', dataKey: 'position', hideColumnOnMobile: true },
+      { label: 'Usuario', def: 'username', dataKey: 'username', sortable: true, hideColumnOnMobile: false },
+      { label: 'Apellido', def: 'lastname', dataKey: 'lastname', sortable: true, hideColumnOnMobile: false },
       { label: 'Nombre', def: 'name', dataKey: 'name', sortable: true, hideColumnOnMobile: false },
       {
         label: 'Fecha nacimiento',
-        def: 'birthdate',
-        dataKey: 'birthdate',
+        def: 'dateBirth',
+        dataKey: 'dateBirth',
         dataType: 'date',
         formatt: 'dd/MMM/yyyy',
         hideColumnOnMobile: true

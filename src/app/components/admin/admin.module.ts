@@ -8,14 +8,11 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/core/material/material.module';
 
-import { TableUsersComponent } from './users/table-users/table-users.component';
 import { TableModule } from 'src/app/modules/table/table.module';
-import { UsersComponent } from './users/users.component';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
-    TableUsersComponent,
-    UsersComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +22,8 @@ import { UsersComponent } from './users/users.component';
     AdminRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-    TableModule
+    TableModule,
+    UsersModule,
   ]
 })
 export class AdminModule { }
