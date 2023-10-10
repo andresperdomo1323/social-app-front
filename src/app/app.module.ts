@@ -14,6 +14,7 @@ import { RegisterComponent } from './components/login/register/register.componen
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { ProfileComponent } from './components/menu/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
     RegisterComponent,
     LoginComponent,
     AdminComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

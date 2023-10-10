@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from './components/menu/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)
   },
+    path: 'profile',
+    loadChildren: () => import('./components/menu/profile/profile.module').then(m => m.ProfileModule)
+  },
+  { path: 'profile/:id', component: ProfileComponent }
 
 
 ];
