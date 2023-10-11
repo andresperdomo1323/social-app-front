@@ -21,12 +21,7 @@ const routes: Routes = [
     component: MenuComponent,
     loadChildren: () => import('./setting/setting.module').then(m => m.SettingModule)
   },
-  {
-    path: 'chat',
-    component: MenuComponent,
-    loadChildren: () => import('./chat/chat.module').then(m => m.ChatModule)
-
-  },
+  
   {
     path: '**',
     redirectTo: 'publications'

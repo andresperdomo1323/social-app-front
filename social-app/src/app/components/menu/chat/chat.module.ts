@@ -7,10 +7,8 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ChatRoutingModule } from './chat-routing.module';
 
 
-
 @NgModule({
   declarations: [
-    ChatComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +16,7 @@ import { ChatRoutingModule } from './chat-routing.module';
     MaterialModule,
     ReactiveFormsModule,
     MatButtonToggleModule,
-    FormsModule
-  ]
+    FormsModule,
+  ],
 })
 export class ChatModule { }

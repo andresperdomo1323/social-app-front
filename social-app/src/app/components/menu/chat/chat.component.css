@@ -1,48 +1,78 @@
-.cardContainer {
-  width: 300px;
-  height: 500px;
+.btn-flotante {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #19530f;
+  padding: 12px 104px;
+  /* position: fixed;
+  bottom: 24px;
+  right: 0px;
+  transition: all 300ms ease 0ms; */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  /* z-index: 99; */
+  text-decoration: none;
+}
+.btn-flotante:hover {
+	background-color: #487440; /* Color de fondo al pasar el cursor */
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Container{
+  background-color: ghostwhite;
+  /* bottom: 19px;
+  padding: 10px;
+  border: 0.5px solid green;
   position: fixed;
-  right: 0;
-  bottom: 0;
+  margin-left: 51em; */
+}
+.chatContainer {
+  padding: 30px;
+  width: 100%;
+  height: max-content;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
+  background-color: ghostwhite;
 }
 
-.card-header {
-  background-color: #195e0db2;
+.local {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: darkcyan;
+  max-width: 80%;
   color: white;
-  font-weight: 700;
+  font-size: 17px;
+  align-self: flex-start;
 }
 
-.imgEnviar {
-  width: 16px;
-  height: 24px;
-  line-height: 1.5;
-}
-
-.imgEnviar:active {
-  transform: scale(0.9);
-}
-
-.card-body {
-  padding: 0.5rem;
-  background-image: url(/assets/fondochat2.avif);
-}
-
-.enviado{
-  display: block;
-  float: right;
-  background-color: #195e0d65;
+.remoto {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: darkkhaki;
+  max-width: 80%;
   color: white;
-  min-width: 50.01%;
-  border-radius: 10px;
-  text-align: left;
+  font-size: 17px;
+  align-self: flex-end;
 }
 
-.recibido{
-  display: block;
-  float: left;
-  background-color: grey;
-  color: white;
-  min-width: 50.01%;
-  border-radius: 10px;
-  text-align: left;
+.inputContainer{
+  background-color: ghostwhite;
+  bottom: 19px;
+  padding: 10px;
 }
+
+input{
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
+

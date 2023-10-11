@@ -32,7 +32,7 @@
                     Notificaciones
                   </a>
                   <span class="icono-notificaciones"></span>
-                  <div class="dropdown-menu">
+                  <div class="dropdown-menu dropdown-menu-lg">
                     <app-notification></app-notification>
                   </div>
                 </li>
@@ -82,6 +82,22 @@
           <hr>
           <li><a class="list-group-item" (click)="cerrarSesion()"><b>Cerrar sesión</b></a></li>
         </ul>
+      </div>
+    </div>
+    <div class="dropup-center dropup" style="position: fixed; bottom: 24px; right: 220px; z-index: 99;">
+      <button class="btn btn-secondary dropdown-toggle" style="width: 12em;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Juan
+      </button>
+      <div class="dropdown-menu">
+        <app-chat></app-chat>
+      </div>
+    </div>
+    <div class="dropup-center dropup" style="position: fixed; bottom: 24px; right: 0; z-index: 99;">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Chat
+      </button>
+      <div class="dropdown-menu">
+        <app-chat></app-chat>
       </div>
     </div>
     <section>

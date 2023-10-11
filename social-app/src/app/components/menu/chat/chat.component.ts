@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from 'src/app/components/menu/chat/services/chat.service';
 
 @Component({
   selector: 'app-chat',
@@ -6,38 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent implements OnInit {
-  nuevoMensaje: string = "";
-  mensajes: any = [
-    {
-      emisor: "id",
-      texto: "hola"
-    },
-    {
-      emisor: "id",
-      texto: "¿cómo estas?"
-    },
-    {
-      emisor: "id",
-      texto: "Bien y tú?"
-    },
-    {
-      emisor: "id",
-      texto: "¿qué haces?"
-    },
-    {
-      emisor: "id",
-      texto: "nada"
-    },
-  ];
-  constructor() { }
+
+  text = "";
+
+  constructor(public chat:ChatService) { }
 
   ngOnInit(): void {
+
+   }
+
+  sendMessage() {
+    let messageInfo = {
+      text: this.text,
+      messageType: 1
+    };
+    this.chat.sendMessage(messageInfo);
+    this.text = "";
   }
-  enviarMensaje() {
-    console.log(this.nuevoMensaje);
-
-    this.nuevoMensaje = "";
-  }
-
-
 }

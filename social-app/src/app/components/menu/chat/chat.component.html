@@ -1,23 +1,14 @@
-<div class="card text-center cardContainer">
-  <div class="card-header">
-    CHAT
-  </div>
+<div class="Container">
+<div class="chatContainer">
+  <p [ngClass]="{'local': message.messageType === 1, 'remoto': message.messageType === 2}"
+  *ngFor="let message of chat.chats">{{message.text}}</p>
+</div>
 
-  <div class="card-body">
-    <div>
-      <p *ngFor="let mensaje of mensajes" class="enviado p-2">
-        {{mensaje.texto}}
-      </p>
-    </div>
-  </div>
-
-  <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
-    <input type="text" class="form-control" placeholder="Ingrese su mensaje" [(ngModel)]="nuevoMensaje"
-      [ngModelOptions]="{standalone: true}">
-    <div class="input-group-append" (click)="enviarMensaje()">
-      <span class="input-group-text" id="basic-addon2">
-        <i class="fa-solid fa-paper-plane imgEnviar" style="color: #195e0db2;"></i>
-      </span>
-    </div>
+<div class="inputContainer">
+  <form (submit)="sendMessage()">
+    <input [(ngModel)]="text" [ngModelOptions]="{standalone:true}" type="text">
+    <button type="submit">Enviar</button>
   </form>
 </div>
+</div>
+
