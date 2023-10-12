@@ -5,26 +5,16 @@
   color: #ffffff;
   background-color: #19530f;
   padding: 12px 104px;
-  /* position: fixed;
-  bottom: 24px;
-  right: 0px;
-  transition: all 300ms ease 0ms; */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  /* z-index: 99; */
   text-decoration: none;
 }
 .btn-flotante:hover {
-	background-color: #487440; /* Color de fondo al pasar el cursor */
+	background-color: #487440;
 	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
 }
 
 .Container{
   background-color: ghostwhite;
-  /* bottom: 19px;
-  padding: 10px;
-  border: 0.5px solid green;
-  position: fixed;
-  margin-left: 51em; */
 }
 .chatContainer {
   padding: 30px;
@@ -50,7 +40,7 @@
 .remoto {
   padding: 20px;
   border-radius: 20px;
-  background-color: darkkhaki;
+  background-color: rgb(93, 172, 100);
   max-width: 80%;
   color: white;
   font-size: 17px;
@@ -59,8 +49,13 @@
 
 .inputContainer{
   background-color: ghostwhite;
-  bottom: 19px;
+  position: fixed;
+  bottom: 0px;
   padding: 10px;
+}
+
+.btnenviar{
+  margin-top: 12px;
 }
 
 input{

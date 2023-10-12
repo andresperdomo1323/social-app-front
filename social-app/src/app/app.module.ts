@@ -16,6 +16,13 @@ import { RegisterComponent } from './components/login/register/register.componen
 import { LoginComponent } from './components/login/login.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
 import { ChatComponent } from './components/menu/chat/chat.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { SocketService } from './services/socket.service';
+
+
+const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +30,7 @@ import { ChatComponent } from './components/menu/chat/chat.component';
     RegisterComponent,
     LoginComponent,
     NotificationComponent,
-    ChatComponent
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +38,7 @@ import { ChatComponent } from './components/menu/chat/chat.component';
     BrowserAnimationsModule,
     CoreModule,
     FormsModule,
+    SocketIoModule.forRoot(config),
     ReactiveFormsModule,
     MatInputModule,
     MaterialModule,
@@ -39,10 +47,10 @@ import { ChatComponent } from './components/menu/chat/chat.component';
     HttpClientModule,
   ],
   providers: [
+    SocketService,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
-
     }
 
   ],
