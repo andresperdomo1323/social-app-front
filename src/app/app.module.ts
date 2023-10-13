@@ -15,6 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { ProfileComponent } from './components/menu/profile/profile.component';
+import { ServicesModule } from './services/services.module';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { ProfileComponent } from './components/menu/profile/profile.component';
     MatInputModule,
     MaterialModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServicesModule
   ],
   providers: [
     {

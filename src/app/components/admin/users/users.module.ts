@@ -4,7 +4,6 @@ import { UsersRoutingModule } from './users-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { UsersComponent } from './users.component';
-import { TableUsersModule } from './table-users/table-users.module';
 import { TableModule } from 'src/app/modules/table/table.module';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { TableModule } from 'src/app/modules/table/table.module';
       UsersRoutingModule,
       MaterialModule,
       ReactiveFormsModule,
-      TableUsersModule,
       TableModule,
   ]
 })

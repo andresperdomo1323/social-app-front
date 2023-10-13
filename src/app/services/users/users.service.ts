@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from '../models/user.models';
+
+import { environment } from './../../../enviroments/environment';
+
+import { User } from '../../models/user.models';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,15 +11,14 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
+	private BASE_URL = environment.apiUrl + 'api/users';
+
   private url = 'http://localhost:3000/api/users';
   private headerCustom: HttpHeaders = new HttpHeaders();
 
   constructor(
     private http: HttpClient,
-
-
-    ) {
-    }
+  ) { }
 
     createUser(user: User) {
       return this.http.post<User>(this.url, user );
@@ -35,7 +37,7 @@ export class UsersService {
       return this.http.get<boolean>(this.url,{params:{username}});
     }
 
-
-
-
+    getAllUsers(): Observable<User[]> {
+      return this.http.get<User[]>(`${this.BASE_URL}/getUsers`);
+    }
 }
