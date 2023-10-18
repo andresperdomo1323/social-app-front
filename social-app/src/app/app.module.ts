@@ -17,10 +17,11 @@ import { LoginComponent } from './components/login/login.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
 import { ChatComponent } from './components/menu/chat/chat.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-import { SocketService } from './services/socket.service';
+// import { SocketService } from './services/socket.service';
 
 
-const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
+
+// const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
 
 
 @NgModule({
@@ -30,16 +31,16 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     RegisterComponent,
     LoginComponent,
     NotificationComponent,
-    ChatComponent,
+    // ChatComponent,
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
     FormsModule,
-    SocketIoModule.forRoot(config),
+    // SocketIoModule.forRoot(config),
     ReactiveFormsModule,
     MatInputModule,
     MaterialModule,
@@ -48,7 +49,7 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     HttpClientModule,
   ],
   providers: [
-    SocketService,
+    // SocketService,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,

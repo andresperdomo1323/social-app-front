@@ -10,6 +10,7 @@ import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
+
   ],
 
   imports: [
