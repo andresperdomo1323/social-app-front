@@ -15,12 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './components/login/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
-import { ChatComponent } from './components/menu/chat/chat.component';
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-import { SocketService } from './services/socket.service';
 
 
-const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
 
 
 @NgModule({
@@ -29,8 +25,7 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     MenuComponent,
     RegisterComponent,
     LoginComponent,
-    NotificationComponent,
-    ChatComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +33,6 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     BrowserAnimationsModule,
     CoreModule,
     FormsModule,
-    SocketIoModule.forRoot(config),
     ReactiveFormsModule,
     MatInputModule,
     MaterialModule,
@@ -47,7 +41,6 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     HttpClientModule,
   ],
   providers: [
-    SocketService,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,

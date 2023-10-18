@@ -7,11 +7,15 @@ import { Upload } from '../models/upload.models';
 })
 export class UploadService {
 
-  private uploadUrl = 'http://localhost:3000/api/upload';
+  // private uploadUrl = 'http://localhost:3000/api/upload';
 
   constructor(private http: HttpClient) {}
 
+  // uploadFile(upload: Upload) {
+  //   return this.http.post<any>(`${this.uploadUrl}/uploadAvatar`, upload);
+  // }
   uploadFile(upload: Upload) {
-    return this.http.post<any>(`${this.uploadUrl}/uploadAvatar`, upload);
+    return this.http.post<any>(upload.url, upload);
   }
+
 }

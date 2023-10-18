@@ -5,8 +5,6 @@ import { MaterialModule } from 'src/app/core/material/material.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
-import { ChatComponent } from './chat/chat.component';
-
 
 @NgModule({
   declarations: [
