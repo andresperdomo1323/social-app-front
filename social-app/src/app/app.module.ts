@@ -27,6 +27,7 @@ import { NotificationComponent } from './components/menu/notification/notificati
     LoginComponent,
     NotificationComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
