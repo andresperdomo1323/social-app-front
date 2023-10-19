@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/core/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-// import { ChatRoutingModule } from './chat-routing.module';
+import { ChatRoutingModule } from './chat-routing.module';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   ],
   imports: [
     CommonModule,
-    // ChatRoutingModule,
+    ChatRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
     MatButtonToggleModule,

@@ -15,9 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './components/login/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
-import { ChatComponent } from './components/menu/chat/chat.component';
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-// import { SocketService } from './services/socket.service';
+// import { ChatComponent } from './components/menu/chat/chat.component';
+// import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
 
 
@@ -49,7 +48,6 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
     HttpClientModule,
   ],
   providers: [
-    // SocketService,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,
