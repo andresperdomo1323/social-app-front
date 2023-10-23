@@ -3,7 +3,7 @@ import { TableColumn } from 'src/app/modules/table/models/table-column';
 import { TableConfig } from 'src/app/modules/table/models/table-config';
 
 import { User } from './../../../models/user.models';
-import { UsersService } from './../../../services/users/users.service';
+import { UsersService } from '../../../services/users.service';
 
 @Component({
   selector: 'app-users',

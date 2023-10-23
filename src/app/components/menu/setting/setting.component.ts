@@ -6,13 +6,14 @@ import { HttpClient } from '@angular/common/http';
 import { UploadService } from 'src/app/services/upload.service';
 import { Upload } from '../../../models/upload.models';
 
-
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
   styleUrls: ['./setting.component.css']
 })
-export class SettingComponent {
+export class
+
+SettingComponent {
   type: any;
   @ViewChild('tabGroup')tabGroup!: MatTabGroup ;
   formS = this.formBuilder.group({

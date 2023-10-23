@@ -14,12 +14,8 @@
     "@angular/cdk": "^16.2.4",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
-<<<<<<< HEAD:package.json
-    "@angular/core": "^16.2.6",
-=======
     "@angular/core": "^16.2.0",
     "@angular/fire": "^7.0.4",
->>>>>>> 13d05bd56400512177fa25ad1b2e54a8816e4214:social-app/package.json
     "@angular/forms": "^16.2.0",
     "@angular/material": "^16.2.4",
     "@angular/platform-browser": "^16.2.0",

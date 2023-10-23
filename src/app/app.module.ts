@@ -11,24 +11,16 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MenuComponent } from './components/menu/menu.component';
-import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './components/login/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-<<<<<<< HEAD:src/app/app.module.ts
 import { AdminComponent } from './components/admin/admin.component';
 import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { ProfileComponent } from './components/menu/profile/profile.component';
-import { ServicesModule } from './services/services.module';
-=======
 import { NotificationComponent } from './components/menu/notification/notification.component';
 // import { ChatComponent } from './components/menu/chat/chat.component';
 // import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
-
-
 // const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
->>>>>>> 13d05bd56400512177fa25ad1b2e54a8816e4214:social-app/src/app/app.module.ts
-
 
 @NgModule({
   declarations: [
@@ -36,13 +28,10 @@ import { NotificationComponent } from './components/menu/notification/notificati
     MenuComponent,
     RegisterComponent,
     LoginComponent,
-<<<<<<< HEAD:src/app/app.module.ts
     AdminComponent,
-    ProfileComponent
-=======
+    ProfileComponent,
     NotificationComponent,
     // ChatComponent,
->>>>>>> 13d05bd56400512177fa25ad1b2e54a8816e4214:social-app/src/app/app.module.ts
   ],
 
   imports: [
@@ -56,13 +45,9 @@ import { NotificationComponent } from './components/menu/notification/notificati
     MatInputModule,
     MaterialModule,
     MatTabsModule,
-<<<<<<< HEAD:src/app/app.module.ts
     HttpClientModule,
-    ServicesModule
-=======
     MatButtonToggleModule,
     HttpClientModule,
->>>>>>> 13d05bd56400512177fa25ad1b2e54a8816e4214:social-app/src/app/app.module.ts
   ],
   providers: [
     {
