@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   onSubmit() {
     if (this.form.valid) {
       const emailControl = this.form.get('email');
@@ -39,6 +40,7 @@ export class LoginComponent implements OnInit {
       if (emailControl && passwordControl) {
         const email = emailControl.value;
         const password = passwordControl.value;
+
 
         const res = this.usersService.login(this.form.value)
         .subscribe((res: any) => {
@@ -60,4 +62,6 @@ export class LoginComponent implements OnInit {
   register(){
     this.router.navigateByUrl('/register')
   }
+
+  
 }

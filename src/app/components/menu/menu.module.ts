@@ -8,16 +8,19 @@ import { MatTabsModule } from '@angular/material/tabs';
 
 
 
-
 @NgModule({
-  declarations: [],
+  declarations: [
+
+  ],
+
   imports: [
     CommonModule,
     MenuRoutingModule,
     MaterialModule,
     CoreModule,
     ReactiveFormsModule,
-    MatTabsModule
+    MatTabsModule,
+
   ]
 })
 export class MenuModule { }

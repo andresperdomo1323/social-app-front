@@ -1,54 +1,67 @@
-<div class="container text-center mt-4">
+<div class="container-fluid text-center mt-4">
   <img src="assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid rounded-circle" style="max-width: 150px; height: auto;">
-  <h2>{{ userProfile.username }}</h2>
+  <h2 class="mt-4">{{ userProfile.username }}</h2>
   <p>{{ userProfile.name }}</p>
   <p>Email: {{ userProfile.email }}</p>
   <p>Intereses: {{ userProfile.interests }}</p>
-  <button type="button" class="boton-verde d-block mx-auto mt-3">Editar perfil</button>
+  <button type="button" class="boton-verde d-block mx-auto mt-3" [routerLink]="['/menu/setting/0']">Editar perfil</button>
 </div>
 
-<div class="container mt-4">
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#publicaciones">Publicaciones</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#seguidores">Seguidores</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#seguidos">Seguidos</a>
-    </li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="publicaciones" class="tab-pane fade show active">
-      <div class="container mt-3">
-        <h3>Publicaciones</h3>
-        <ul>
-          <li>Publicación 1</li>
-          <li>Publicación 2</li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="seguidores" class="tab-pane fade">
-      <div class="container mt-3">
-        <h3>Seguidores</h3>
-        <ul>
-          <li>Seguidor 1</li>
-          <li>Seguidor 2</li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="seguidos" class="tab-pane fade">
-      <div class="container mt-3">
-        <h3>Seguidos</h3>
-        <ul>
-          <li>Usuario seguido 1</li>
-          <li>Usuario seguido 2</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<div class="group" style="display: none;">
+  <mat-button-toggle-group #colorToggle="matButtonToggleGroup"
+                           value="accent"
+                           aria-label="Change color">
+    <mat-button-toggle value="accent">Accent</mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
+<div class="group" style="display: none;">
+  <mat-button-toggle-group #backgroundColorToggle="matButtonToggleGroup"
+                           value="primary"
+                           aria-label="Change color">
+    <mat-button-toggle value="primary">Primary</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+  <mat-tab-group class="mt-5 pestañas" [color]="colorToggle.value" [backgroundColor]="backgroundColorToggle.value">
+  <mat-tab label="Publicaciones">
+    <ng-template mat-tab-label>
+      <span>Publicaciones</span>
+    </ng-template>
+    <p>Publicaciones</p>
+    <p>Publicaciones</p>
+    <p>Publicaciones</p>
+    <p>Publicaciones</p>
+    <p>Publicaciones</p>
+    <p>Publicaciones</p>
+    <p>Publicaciones</p>
+    <p>Publicaciones</p>
+
+  </mat-tab>
+
+  <mat-tab label="Pestaña 2">
+    <ng-template mat-tab-label>
+      <span>Seguidos</span>
+    </ng-template>
+    <p>Info de seguidos</p>
+    <p>Info de seguidos</p>
+    <p>Info de seguidos</p>
+    <p>Info de seguidos</p>
+    <p>Info de seguidos</p>
+    <p>Info de seguidos</p>
+    <p>Info de seguidos</p>
+    <p>Info de seguidos</p>
+  </mat-tab>
+
+  <mat-tab label="Pestaña 3">
+    <ng-template mat-tab-label>
+      <span>Seguidores</span>
+    </ng-template>
+    <p>Info de seguidores</p>
+    <p>Info de seguidores</p>
+    <p>Info de seguidores</p>
+    <p>Info de seguidores</p>
+    <p>Info de seguidores</p>
+    <p>Info de seguidores</p>
+    <p>Info de seguidores</p>
+    <p>Info de seguidores</p>
+  </mat-tab>

@@ -1,19 +1,134 @@
+/* cuadro para publications */
+/* Estilos para el contenedor principal */
+.divpublication {
+  text-align: center; /* Centrar el contenido */
+  margin: 10px auto; /* Centrar horizontalmente y aplicar margen superior e inferior */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  max-width: 48em;/* Ancho máximo del contenedor */
+}
 
-.container-noticias{
+/* Estilos para el área de texto del mensaje */
+.textarea {
+  width: 100%;
+  max-width: 86%; /* El textarea tomará el ancho completo del contenedor */
+  height: 65px; /* Ajustar la altura */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de publicar */
+.buttonpublicar {
+  background-color: rgb(34, 139, 34);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Espacio superior */
+}
+
+/* Estilos para las imágenes seleccionadas */
+.imgpublica {
+  max-width: 100%;
+  max-height: 200px;
+  margin: 10px 0;
+}
+
+.avatarpubli {
+  width: 70px;
+  border-radius: 50%;
+  float: left; /* Alinear a la izquierda */
+  margin-right: 10px;
+}
+
+/* Estilo opcional para el botón de carga de archivos */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(34, 139, 34, 0.295);;
+  color: #fff;
+  border: 1px solid rgb(34, 139, 34);;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.custom-file-upload:hover {
+  background-color: #90dd8350;
+}
+
+
+
+.container-noticias {
   text-align: center;
   border-color: 1px solid,
 }
 
-.sugerencias{
- background-color: #90dd8350;
- height: 100vh;
- border-right: 1px solid #bce7b5e3;
- border-top: 1px solid #bce7b5e3;
- border-bottom: 1px solid #bce7b5e3;
- font-size: 17px;
+.sugerencias {
+  background-color: #90dd8350;
+  height: 100vh;
+  border-right: 1px solid #bce7b5e3;
+  border-top: 1px solid #bce7b5e3;
+  border-bottom: 1px solid #bce7b5e3;
+  font-size: 17px;
 }
 
-.noticias{
+.imgprofilesug {
+  margin-bottom: 10px;
+  width: 60px;
+  border-radius: 50%;
+  border: 3px solid forestgreen;
+}
+
+.amigos {
+  margin-left: 4px;
+  margin-bottom: 0;
+  color: rgb(114, 114, 114);
+}
+
+.imageSug {
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid forestgreen;
+}
+
+.activo {
+  color: rgb(185, 185, 185);
+  margin-bottom: 0;
+}
+
+.btncomentarios{
+  color: rgb(185, 185, 185);
+  margin-left: 3.7em;
+  margin-top: 10px;
+}
+
+.nombAgregar {
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+
+.container-suger {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.nombSug {
+  margin-bottom: 0;
+}
+
+.btnagregar {
+  margin-left: 5.5em;
+}
+
+.btncancelar {
+  margin-left: 5px;
+}
+
+.noticias {
   font-size: 17px;
   height: 100vh;
   padding: 0;
@@ -21,46 +136,159 @@
   border-top: 1px solid #bce7b5e3;
 }
 
+.perfil-info p {
+  margin: 1px 0;
+}
+
+.imgprofilesug2{
+  margin-bottom: 10px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.escribircoment{
+  outline: none;
+    box-sizing: border-box;
+    height: 33px;
+    padding-right: 59%;
+    color: rgb(185, 185, 185);
+    border-radius: 30px;
+    font-size: 15px;
+    border: 1px solid rgb(185, 185, 185);
+    transition: all .7s ease;
+}
+
 /* css noticas */
-.noticiasPrincipales{
+.noticiasPrincipales {
   overflow: auto;
+  display: flex;
+  overflow-x: hidden;
   height: 90vh;
 }
 
-.subNotificaciones{
-  width: 65%;
-  margin: auto;
+.subNotificaciones {
   text-align: left;
 }
 
-.subNotificaciones p{
-  margin: 0.5em 0 0;
+.subNotificaciones p {
+  margin: 0.1em;
 }
 
-.parrrafoFour{
+.parrrafoFour {
   margin: 0.5em 0 0.5em 2em !important;
 }
 
-.photo-id{
-  width: 100%;
+.photo-id {
+  width: 98%;
   border-radius: 8px;
 }
 
-.imgProfile{
-  position: absolute;
-  width: 100px;
+.nombUsu {
+  color: rgb(185, 185, 185);
+}
+
+.avatar {
+  width: 70px;
   left: 15em;
   border-radius: 50%;
 }
 
+.avatar-container {
+  text-align: right;
+  padding: 0%;
+}
 
-.chat{
+.hourscoment {
+  color: rgb(185, 185, 185);
+  margin-left: 12px;
+}
+
+.chat {
   height: 100vh;
   border-right: 1px solid #bce7b5e3;
   border-top: 1px solid #bce7b5e3;
 }
 
-h2{
+h2 {
   border-bottom: 1px solid #bce7b5e3;
 }
 
+.hours {
+  color: rgb(185, 185, 185);
+  margin-bottom: 4px;
+}
+
+.music {
+  color: rgb(151, 149, 149);
+  margin: 0em 0 0.5em 0em !important;
+}
+
+.heart {
+  font-size: 21px;
+  padding-top: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+.like {
+  margin-left: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+.comment {
+  font-size: 20px;
+  margin-left: 1em;
+  color: rgb(185, 185, 185);
+}
+
+.star {
+  margin-left: 9em;
+  color: rgb(185, 185, 185);
+}
+
+.share {
+  margin-left: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+.bookmark {
+  margin-left: 0.5em;
+  color: rgb(185, 185, 185);
+}
+
+hr {
+  margin: 0.5em;
+}
+
+.imageProfile {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.container-img {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.comentNomb {
+  margin-left: 11px;
+}
+
+.emoji {
+  width: 50px;
+  margin-left: 5em;
+}
+
+@media (max-width: 767px) {
+  .photo-id {
+    width: 100%;
+  }
+
+  .subNotificaciones {
+    font-size: 0.8rem;
+  }
+
+  .avatar {
+    width: 80%;
+
+  }
+}

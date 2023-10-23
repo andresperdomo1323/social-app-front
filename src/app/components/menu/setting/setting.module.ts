@@ -6,12 +6,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CoreModule } from 'src/app/core/core.module';
 import { SettingComponent } from './setting.component';
+import { PerfilSettingComponent } from './perfil-setting/perfil-setting.component';
+import { PublicacionesGuardadasSettingComponent } from './publicaciones-guardadas-setting/publicaciones-guardadas-setting.component';
+import { ConfiguracionSettingComponent } from './configuracion-setting/configuracion-setting.component';
+import { AyudaysoporteSettingComponent } from './ayudaysoporte-setting/ayudaysoporte-setting.component';
 
 
 
 @NgModule({
   declarations: [
-    SettingComponent
+    SettingComponent,
+    PerfilSettingComponent,
+    PublicacionesGuardadasSettingComponent,
+    ConfiguracionSettingComponent,
+    AyudaysoporteSettingComponent
   ],
   imports: [
     CommonModule,

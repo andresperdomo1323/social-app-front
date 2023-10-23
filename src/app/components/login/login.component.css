@@ -51,11 +51,16 @@ u{
 .botonIniciarSesion{
     margin-left: 0;
     width: 100%;
-    background-color:#97B592;
+    background-color:#428137;
     border: 0;
     margin-top: 1%;
     padding: 10px;
     border-radius: 10px;
+}
+
+.botonIniciarSesion:hover {
+	background-color: #97B592;
+
 }
 
 .btnEye{
@@ -96,3 +101,9 @@ u{
 
 }
 
+@media screen and (max-width:500px){
+  .containerFormulario{
+    width: 100%;
+    align-items: center;
+  }
+}

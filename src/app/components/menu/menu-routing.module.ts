@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './menu.component';
 
@@ -18,11 +17,11 @@ const routes: Routes = [
 
   },
   {
-    path: 'setting',
+    path: 'setting/:type',
     component: MenuComponent,
     loadChildren: () => import('./setting/setting.module').then(m => m.SettingModule)
-
   },
+  
   {
     path: '**',
     redirectTo: 'publications'

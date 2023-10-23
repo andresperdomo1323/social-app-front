@@ -3,8 +3,12 @@ import { FormBuilder, FormGroup, Validators, AbstractControl, AsyncValidatorFn  
 import { UsersService } from 'src/app/services/users/users.service';
 import { User } from '../../../models/user.models';
 import { Router } from '@angular/router';
+<<<<<<< HEAD:src/app/components/login/register/register.component.ts
 import { async, map, tap } from 'rxjs';
 import { validateUsername } from 'src/app/validators/validator';
+=======
+
+>>>>>>> 13d05bd56400512177fa25ad1b2e54a8816e4214:social-app/src/app/components/login/register/register.component.ts
 
 @Component({
   selector: 'app-register',

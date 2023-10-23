@@ -18,7 +18,7 @@
 
           <div class="text-center mt-2">
             <p class="text-sm">o</p>
-            <h3 class="font-semibold text-xs">Crea tu cuenta</h3>
+            <p>Crea tu cuenta</p>
           </div>
 
           <form [formGroup]="userForm" (ngSubmit)="onSubmit($event)"  ng-reflect-form="[object Object]">
@@ -54,21 +54,25 @@
                 </mat-form-field>
               </div>
             </div>
+<<<<<<< HEAD:src/app/components/login/register/register.component.html
           <button class= "boton-verde d-grid gap-2 col-6 mx-auto">REGÍSTRATE</button>
+=======
+          <button type="submit" class= "boton-verde d-grid gap-2 col-6 mx-auto"> Registrarte </button>
+>>>>>>> 13d05bd56400512177fa25ad1b2e54a8816e4214:social-app/src/app/components/login/register/register.component.html
         </form>
-        <div class="mt-4 condiciones">
+        <div class="mt-2 condiciones">
           <p>
-            Al hacer clic en "Regístrate", aceptas nuestras Condiciones, Política de privacidad y Política de cookies.
+            Al hacer clic en "Registrarte", aceptas nuestras Condiciones, Política de privacidad y Política de cookies.
           </p>
         </div>
         <div class="mt-2 text-center">
-          <h4 class="text-sm" style="display: inline; margin-right: 5px">¿Ya tienes cuenta?</h4>
+          <p class="text-sm" style="display: inline; margin-right: 5px">¿Ya tienes cuenta?</p>
           <a href="#" style="display: inline">Entra</a>
         </div>
         <div class="text-center mt-4">
-          <h5 class="text-xs">Descarga la aplicación</h5>
+          <p class="text-xs mb-0">Descarga la aplicación</p>
           <button type="button" class="w-35 bg-transparent border-none mx-auto">
-            <img src="/assets/images/disponible-en-google-play-badge.svg" alt="googlePlay" class="w-32" />
+            <img src="/assets/images/disponible-en-google-play-badge.svg" alt="googlePlay" class="gp"/>
           </button>
         </div>
       </div>
