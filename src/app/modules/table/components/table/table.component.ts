@@ -22,7 +22,6 @@ export class TableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   @Input() set data(data: Array<any>) {
-    console.log('en el input', data)
     this.dataSource.data = data;
     this.dataSource.paginator = this.paginator;
   }
