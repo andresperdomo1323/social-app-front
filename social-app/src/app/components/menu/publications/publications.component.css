@@ -1,3 +1,67 @@
+/* cuadro para publications */
+/* Estilos para el contenedor principal */
+.divpublication {
+  text-align: center; /* Centrar el contenido */
+  margin: 10px auto; /* Centrar horizontalmente y aplicar margen superior e inferior */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  max-width: 48em;/* Ancho máximo del contenedor */
+}
+
+/* Estilos para el área de texto del mensaje */
+.textarea {
+  width: 100%;
+  max-width: 86%; /* El textarea tomará el ancho completo del contenedor */
+  height: 65px; /* Ajustar la altura */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el botón de publicar */
+.buttonpublicar {
+  background-color: rgb(34, 139, 34);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Espacio superior */
+}
+
+/* Estilos para las imágenes seleccionadas */
+.imgpublica {
+  max-width: 100%;
+  max-height: 200px;
+  margin: 10px 0;
+}
+
+.avatarpubli {
+  width: 70px;
+  border-radius: 50%;
+  float: left; /* Alinear a la izquierda */
+  margin-right: 10px;
+}
+
+/* Estilo opcional para el botón de carga de archivos */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(34, 139, 34, 0.295);;
+  color: #fff;
+  border: 1px solid rgb(34, 139, 34);;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.custom-file-upload:hover {
+  background-color: #90dd8350;
+}
+
+
+
 .container-noticias {
   text-align: center;
   border-color: 1px solid,
@@ -81,6 +145,19 @@
   width: 60px;
   border-radius: 50%;
 }
+
+.escribircoment{
+  outline: none;
+    box-sizing: border-box;
+    height: 33px;
+    padding-right: 59%;
+    color: rgb(185, 185, 185);
+    border-radius: 30px;
+    font-size: 15px;
+    border: 1px solid rgb(185, 185, 185);
+    transition: all .7s ease;
+}
+
 /* css noticas */
 .noticiasPrincipales {
   overflow: auto;
@@ -199,18 +276,6 @@ hr {
 .emoji {
   width: 50px;
   margin-left: 5em;
-}
-
-.escribircoment{
-  outline: none;
-    box-sizing: border-box;
-    height: 33px;
-    padding-right: 59%;
-    color: rgb(185, 185, 185);
-    border-radius: 30px;
-    font-size: 15px;
-    border: 1px solid rgb(185, 185, 185);
-    transition: all .7s ease;
 }
 
 @media (max-width: 767px) {

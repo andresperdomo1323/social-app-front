@@ -6,7 +6,6 @@ import { RegisterRoutingModule } from './register-routing.module';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
-import { FormlyModule } from '@ngx-formly/core';
 
 
 
@@ -21,7 +20,6 @@ import { FormlyModule } from '@ngx-formly/core';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    FormlyModule,
     FormsModule,
   ]
 })

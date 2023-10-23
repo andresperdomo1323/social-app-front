@@ -18,6 +18,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     CoreModule,
     ReactiveFormsModule,
     MatTabsModule,
+
   ]
 })
 export class MenuModule { }
