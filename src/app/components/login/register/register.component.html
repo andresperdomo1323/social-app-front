@@ -24,34 +24,40 @@
           <form [formGroup]="userForm" (ngSubmit)="onSubmit($event)"  ng-reflect-form="[object Object]">
             <div>
               <mat-form-field>
-                <input formControlName="name" placeholder="Nombre" matInput type="text" required [class.error]="userForm.get('name')?.hasError('noContieneNumeros')"/>
-                <mat-error *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched">El nombre es obligatorio.</mat-error>
-                <div *ngIf="userForm.get('name')?.hasError('noContieneNumeros')" class="error-message">
-                  No se permiten números en el nombre.
-                </div>
+                <input formControlName="name" placeholder="Nombre" matInput type="text" required pattern="^[A-Za-z]+$" [matTooltip]="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched ? 'El nombre es obligatorio' : userForm.get('name')?.hasError('pattern') && userForm.get('name')?.touched ? 'No se permiten números en el nombre' : ''">
+                <mat-icon matSuffix *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched" matTooltip="El nombre es obligatorio" color="error">error</mat-icon>
+                <mat-icon matSuffix *ngIf="userForm.get('name')?.hasError('pattern') && userForm.get('name')?.touched" matTooltip="No se permiten números en el nombre" color="error">error</mat-icon>
               </mat-form-field>
+              
+              
               <mat-form-field>
-                <input formControlName="lastName" placeholder="Apellido" matInput type="text" required>
-                <mat-error *ngIf="userForm.get('lastName')?.hasError('required') && userForm.get('lastName')?.touched">El apellido es obligatorio.</mat-error>
+                <input formControlName="lastName" placeholder="Apellido" matInput type="text" required pattern="^[A-Za-z]+$" [matTooltip]="userForm.get('lastName')?.hasError('required') && userForm.get('lastName')?.touched ? 'El nombre es obligatorio' : userForm.get('lastName')?.hasError('pattern') && userForm.get('lastName')?.touched ? 'No se permiten números en el apellido' : ''">
+                <mat-icon matSuffix *ngIf="userForm.get('lastName')?.hasError('required') && userForm.get('lastName')?.touched" matTooltip="El apellido es obligatorio" color="error">error</mat-icon>
+                <mat-icon matSuffix *ngIf="userForm.get('lastName')?.hasError('pattern') && userForm.get('lastName')?.touched" matTooltip="No se permiten números en el apellido" color="error">error</mat-icon>
               </mat-form-field>
               <mat-form-field>
                 <input formControlName="email" placeholder="Correo electrónico" matInput type="email" required>
-                <mat-error *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">El correo es obligatorio.</mat-error>
-                <mat-error *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched">El correo no es válido.</mat-error>
+                <mat-icon
+                  matSuffix
+                  *ngIf="userForm.get('email')?.hasError('emailInvalid') && userForm.get('email')?.touched"
+                  color="red"
+                  matTooltip="El correo no es válido. Debe contener al menos una '@' y un '.' después de la '@'">error</mat-icon>
               </mat-form-field>
-              <mat-form-field >
-                <input formControlName="username" placeholder="Nombre de usuario" matInput type="text" required>
-                <mat-error *ngIf="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched">El nombre de usuario es obligatorio.</mat-error>
-                <mat-error *ngIf="userForm.get('username')?.hasError('usernameExists') && userForm.get('username')?.touched">El nombre de usuario ya esta registrado</mat-error>
+                  
+              <mat-form-field>
+                <input formControlName="username" placeholder="Nombre de usuario" matInput type="text" required [matTooltip]="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched ? 'El nombre de usuario es obligatorio' : ''">
+                <mat-icon matSuffix *ngIf="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched" matTooltip="El nombre de usuario es obligatorio" color="error">error</mat-icon>
               </mat-form-field>
+              
               <div class="inputFormDiv">
                 <mat-form-field>
                   <input formControlName="password" placeholder="Contraseña" [type]="!submitted ? 'password' : 'text'" matInput type="password" required>
-                  <button mat-icon-button matSuffix type="button" color="primary" class="btnEye" (click)="submitted = !submitted">
-                    <i [ngClass]="{'fa fa-eye-slash':!submitted, 'fa-solid fa-eye btn-eye':submitted}"></i>
+                  <mat-icon matSuffix *ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched" matTooltip="Contraseña  es obligatoria" color="error" style="vertical-align: middle;">error</mat-icon>
+                  <button mat-icon-button matSuffix type="button" color="primary" class="btnEye" (click)="submitted = !submitted" style="vertical-align: middle;">
+                    <i [ngClass]="{'fa fa-eye-slash': !submitted, 'fa-solid fa-eye btn-eye': submitted}" style="vertical-align: middle;"></i>
                   </button>
-                  <mat-error *ngIf="userForm.get('password')?.hasError('required')">La contraseña es obligatoria.</mat-error>
                 </mat-form-field>
+                
               </div>
             </div>
           <button type="submit" class= "boton-verde d-grid gap-2 col-6 mx-auto"> Registrarte </button>

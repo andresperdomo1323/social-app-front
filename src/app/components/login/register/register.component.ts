@@ -13,6 +13,7 @@ import { validateUsername } from 'src/app/validators/validator';
 })
 export class RegisterComponent implements OnInit {
   submitted: boolean = false;
+  showEmailError: boolean = false;
   userForm: FormGroup = new FormGroup({});
 
 
@@ -26,6 +27,14 @@ export class RegisterComponent implements OnInit {
 
     ) {
       this.buildForm();
+    }
+
+    emailValidator(control: AbstractControl): { [key: string]: boolean } | null {
+      const email = control.value;
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        return { emailInvalid: true };
+      }
+      return null;
     }
 
 
@@ -58,8 +67,8 @@ export class RegisterComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email],],
-      username: ['', [Validators.required],validateUsername(this.usersService)],
+      email: ['', [Validators.required, Validators.email, this.emailValidator]],
+      username: ['', [Validators.required], validateUsername(this.usersService)],
       password: ['', [Validators.required]],
       role: ['user', [Validators.required]],
     });
