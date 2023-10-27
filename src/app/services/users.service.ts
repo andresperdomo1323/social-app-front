@@ -23,7 +23,9 @@ export class UsersService {
     createUser(user: User) {
       return this.http.post<User>(this.url, user );
     }
-
+    checkEmailExists(email: string): Observable<{ message: string }> {
+      return this.http.post<{ message: string }>('http://localhost:3000/api/users/verify', { email });
+    }
 
     login(form: any) {
       return this.http.post<any>(`${this.url}/login`,form);

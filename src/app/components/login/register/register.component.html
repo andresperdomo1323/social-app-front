@@ -37,12 +37,11 @@
               </mat-form-field>
               <mat-form-field>
                 <input formControlName="email" placeholder="Correo electrónico" matInput type="email" required>
-                <mat-icon
-                  matSuffix
-                  *ngIf="userForm.get('email')?.hasError('emailInvalid') && userForm.get('email')?.touched"
-                  color="red"
-                  matTooltip="El correo no es válido. Debe contener al menos una '@' y un '.' después de la '@'">error</mat-icon>
+                <mat-icon matSuffix *ngIf="userForm.get('email')?.hasError('emailInvalid') && userForm.get('email')?.touched" color="red" matTooltip="El correo no es válido. Debe contener al menos una '@' y un '.' después de la '@'">error</mat-icon>
+                <mat-icon matSuffix *ngIf="userForm.get('email')?.hasError('emailExists')" color="red" matTooltip="Este correo electrónico ya está registrado.">error</mat-icon>
               </mat-form-field>
+              
+              
                   
               <mat-form-field>
                 <input formControlName="username" placeholder="Nombre de usuario" matInput type="text" required [matTooltip]="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched ? 'El nombre de usuario es obligatorio' : ''">
