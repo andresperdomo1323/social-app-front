@@ -1,9 +1,14 @@
-<div class="container-fluid text-center mt-4">
-  <img src="assets/images/blank-profile-picture-973460_640.png" alt="Foto de perfil" class="img-fluid rounded-circle" style="max-width: 150px; height: auto;">
-  <h2 class="mt-4">{{ userProfile.username }}</h2>
-  <p>{{ userProfile.name }}</p>
-  <p>Email: {{ userProfile.email }}</p>
-  <p>Intereses: {{ userProfile.interests }}</p>
+<div class="container-fluid text-center mt-4" *ngFor="let user of displayDataDetails()" >
+
+
+
+  <img [src]="user.avatar" alt="Foto de perfil" class="img-fluid rounded-circle" style="max-width: 150px; height: auto;">
+
+
+
+  <h2 class="mt-4">{{ user.name }}</h2>
+  <p>{{ user.username }}</p>
+  <p>Email: {{ user.email }}</p>
   <button type="button" class="boton-verde d-block mx-auto mt-3" [routerLink]="['/menu/setting/0']">Editar perfil</button>
 </div>
 

@@ -4,7 +4,7 @@ import { UsersService } from 'src/app/services/users.service';
 import { User } from '../../../models/user.models';
 import { Router } from '@angular/router';
 import { async, map, tap } from 'rxjs';
-import { validateUsername } from 'src/app/validators/validator';
+
 
 @Component({
   selector: 'app-register',
@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
       this.usersService.createUser(user)
       .subscribe((newUser: User) => {
         console.log(newUser);
-        this.router.navigate(['./login']);
+        this.router.navigate(['/']);
       })
     }
 
@@ -59,7 +59,7 @@ export class RegisterComponent implements OnInit {
       name: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email],],
-      username: ['', [Validators.required],validateUsername(this.usersService)],
+      username: ['', [Validators.required],],
       password: ['', [Validators.required]],
       role: ['user', [Validators.required]],
     });

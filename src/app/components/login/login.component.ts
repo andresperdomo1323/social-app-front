@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/services/users.service';
+import { AuthGoogleService } from 'src/app/services/auth-google.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private usersService: UsersService,
-    private router: Router
+    private router: Router,
+    private authGoogleService: AuthGoogleService
     ) {
       this.buildForm();
     }
@@ -31,30 +33,32 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   onSubmit() {
     if (this.form.valid) {
-      const emailControl = this.form.get('email');
-      const passwordControl = this.form.get('password');
+      const { email, password } = this.form.value;
+      this.usersService.login(email, password).subscribe(
+        (response) => {
+          // Manejar la respuesta aquí y guardar en localStorage si es exitosa la autenticación
+          localStorage.setItem('token', response.token);
+          localStorage.setItem('user', JSON.stringify(response));
+          // Puedes redirigir a una nueva página, mostrar un mensaje, etc.
+          this.router.navigateByUrl('/menu');
+        },
+        (error) => {
+          // Manejar errores de inicio de sesión
+        }
+      );
 
-      if (emailControl && passwordControl) {
-        const email = emailControl.value;
-        const password = passwordControl.value;
 
-
-        const res = this.usersService.login(this.form.value)
-        .subscribe((res: any) => {
-          console.log(res);
-          localStorage.setItem('token', res.token);
-        });
-
-      }
     }
-    this.form.reset();
   }
-  login(){
-    this.router.navigateByUrl('/menu')
+
+
+  loginGoogle(){
+    this.authGoogleService.login();
   }
+
+
   get fc() {
     return this.form.controls;
   }

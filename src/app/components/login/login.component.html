@@ -50,7 +50,7 @@
             </mat-form-field>
           </div>
       </div>
-      <button (click)="login()" class="btn btn-primary botonIniciarSesion">Iniciar sesión</button>
+      <button (click)="onSubmit()" class="btn btn-primary botonIniciarSesion">Iniciar sesión</button>
     </form>
     <div>
     </div>
@@ -59,7 +59,7 @@
     <p>O iniciar sesión con</p>
   </div>
   <div>
-    <button type="button" class="btn btn-outline-dark google">
+    <button type="button" (click)="loginGoogle()" class="btn btn-outline-dark google">
     <i class="fa-brands fa-google"></i>
     Google
   </button>

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MaterialModule } from './core/material/material.module';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MenuComponent } from './components/menu/menu.component';
@@ -17,10 +17,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { ProfileComponent } from './components/menu/profile/profile.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
-// import { ChatComponent } from './components/menu/chat/chat.component';
-// import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-
-// const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [
@@ -48,11 +45,13 @@ import { NotificationComponent } from './components/menu/notification/notificati
     HttpClientModule,
     MatButtonToggleModule,
     HttpClientModule,
+    OAuthModule.forRoot()
+
   ],
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy,
+      useClass: PathLocationStrategy
     }
 
   ],

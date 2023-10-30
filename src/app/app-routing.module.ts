@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./components/menu/profile/profile.module').then(m => m.ProfileModule)
   },
-  { path: 'profile/:id', component: ProfileComponent }
+  { path: 'profile/:_id', component: ProfileComponent }
   // {
   //   path: 'chat',
   //   component: ChatComponent

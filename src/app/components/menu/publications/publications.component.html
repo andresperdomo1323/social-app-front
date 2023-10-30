@@ -102,6 +102,9 @@
     </div>
   </div>
   <div class="col-md-8 noticias">
+    <div>
+      <button type="button" class="btn btn-success" (click)="showData()">data</button>
+    </div>
     <!--publications -->
     <div class="divpublication">
       <form [formGroup]="publicacionesForm" (ngSubmit)="onSubmit($event)">

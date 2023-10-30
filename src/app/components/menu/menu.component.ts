@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthGoogleService } from 'src/app/services/auth-google.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,7 +13,10 @@ export class MenuComponent {
   year: any;
   today = new Date();
 
-  constructor( private router:Router) {}
+  constructor(
+    private router:Router,
+    private authGoogleService: AuthGoogleService
+    ) {}
 
   ngOnInit(): void {
     this.year = this.today.getFullYear();
@@ -58,8 +62,10 @@ export class MenuComponent {
     }, 150);
   }
 
-  cerrarSesion(){
-    this.router.navigateByUrl('')
+  logout(){
+    this.authGoogleService.logout();
+    this.router.navigateByUrl('/');
   }
+
 
 }
