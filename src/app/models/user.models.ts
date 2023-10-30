@@ -11,6 +11,10 @@ export interface User {
   avatar?: string;
 }
 
+export interface updateUser{
+  
+}
+
 
 
 
