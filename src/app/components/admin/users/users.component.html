@@ -1,0 +1,10 @@
+<h1 class="h1-tittle">Usuarios</h1>
+<section>
+  <app-table
+    [data]="usersList"
+    [columns]="tableColumns"
+    [config]="tableConfig"
+    (select)="onSelect($event)"
+  >
+  </app-table>
+</section>

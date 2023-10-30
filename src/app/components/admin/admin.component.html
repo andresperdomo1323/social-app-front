@@ -1,0 +1,46 @@
+<mat-toolbar class="top-toolbar-admin">
+  <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Dashborad Administrador</span>
+  <span class="toolbar-item-spacer"></span>
+
+  <div class="logo-social">
+    <a href="#">
+      <img src="/assets/logo.png" alt="logo" class="logo">
+    </a>
+    <a href="#">
+      <img src="/assets/social-app.png" alt="social-app" class="social-app">
+    </a>
+  </div>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="side" [class.mat-elevation-z4]="true" class="app-sidenav">
+    <mat-nav-list>
+      <a class="mat-list-item" mat-list-item routerLink="/admin/users">
+        <div class="nav-item">
+          <mat-icon>people</mat-icon>
+          <span>Usuarios</span>
+        </div>
+      </a>
+      <a class="mat-list-item" mat-list-item routerLink="#">
+        <div class="nav-item">
+          <mat-icon>bar_chart</mat-icon>
+          <span>Estadísticas</span>
+        </div>
+      </a>
+      <a class="mat-list-item" mat-list-item routerLink="#">
+        <div class="nav-item">
+          <mat-icon>help_outline</mat-icon>
+          <span>Soporte</span>
+        </div>
+      </a>
+    </mat-nav-list>    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
