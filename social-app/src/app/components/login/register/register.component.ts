@@ -28,6 +28,27 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // onSubmit(event: Event) {
+    // this.submitted = true;
+    // event.preventDefault();
+    // if(this.userForm.valid){
+    //   const { email, password, name, lastName, role, username } = this.userForm.value;
+
+    //   this.usersService.loginCreateFirebase(email, password)
+    //     .then((userCredential) => {
+    //       if (userCredential.user){
+    //         let user = {
+    //           uid: userCredential.user.uid,
+    //           name: name,
+    //           lastName: lastName,
+    //           username: username,
+    //           email: email,
+    //           password:  password,
+    //           role: role
+    //         };
+    //       }
+          // User registered successfully, now save the user in MongoDB
+
 
   onSubmit(event: Event) {
     this.submitted = true;

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user.models';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ export class UsersService {
     ) {
     }
 
-    createUser(user: User) {
+    createUser(user: any) {
       return this.http.post<User>(this.url, user );
     }
 
@@ -26,7 +27,6 @@ export class UsersService {
     login(form: any) {
       return this.http.post<any>(`${this.url}/login`,form);
     }
-
 
 
 }

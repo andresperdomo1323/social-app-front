@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MaterialModule } from './core/material/material.module';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common'; // Importa PathLocationStrategy
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MenuComponent } from './components/menu/menu.component';
@@ -15,13 +15,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './components/login/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
-// import { ChatComponent } from './components/menu/chat/chat.component';
-// import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { ChatComponent } from './components/menu/chat/chat.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
-
-
-// const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
-
+const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
 
 @NgModule({
   declarations: [
@@ -30,7 +27,7 @@ import { NotificationComponent } from './components/menu/notification/notificati
     RegisterComponent,
     LoginComponent,
     NotificationComponent,
-    // ChatComponent,
+    ChatComponent,
   ],
 
   imports: [
@@ -39,7 +36,7 @@ import { NotificationComponent } from './components/menu/notification/notificati
     BrowserAnimationsModule,
     CoreModule,
     FormsModule,
-    // SocketIoModule.forRoot(config),
+    SocketIoModule.forRoot(config),
     ReactiveFormsModule,
     MatInputModule,
     MaterialModule,
@@ -50,9 +47,8 @@ import { NotificationComponent } from './components/menu/notification/notificati
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy,
+      useClass: PathLocationStrategy, 
     }
-
   ],
   bootstrap: [AppComponent]
 })

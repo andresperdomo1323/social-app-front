@@ -12,54 +12,38 @@ export class MenuComponent {
   year: any;
   today = new Date();
 
-  constructor( private router:Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.year = this.today.getFullYear();
   }
 
-  //Rutas configuraciones
-  inicio(){
-    this.router.navigateByUrl('/menu/publications')
-    setTimeout(() => {
-      window.location.reload()
-    }, 150);
+  // Rutas configuraciones
+  inicio() {
+    this.router.navigateByUrl('/menu/publications');
   }
 
-  perfil(){
-    this.router.navigateByUrl('/menu/profile')
+  perfil() {
+    this.router.navigateByUrl('/menu/profile');
   }
 
-  editarPerfil(){
-    this.router.navigateByUrl('/menu/setting/0')
-    setTimeout(() => {
-      window.location.reload()
-    }, 150);
+  editarPerfil() {
+    this.router.navigateByUrl('/menu/setting/0');
   }
 
-  publicaciones(){
-    this.router.navigateByUrl(`/menu/setting/1`)
-    setTimeout(() => {
-      window.location.reload()
-    }, 150);
+  publicaciones() {
+    this.router.navigateByUrl(`/menu/setting/1`);
   }
 
-  configuracionPrivacidad(){
-    this.router.navigateByUrl(`/menu/setting/2`)
-    setTimeout(() => {
-      window.location.reload()
-    }, 150);
+  configuracionPrivacidad() {
+    this.router.navigateByUrl(`/menu/setting/2`);
   }
 
-  ayudaySoporte(){
-    this.router.navigateByUrl(`/menu/setting/3`)
-    setTimeout(() => {
-      window.location.reload()
-    }, 150);
+  ayudaySoporte() {
+    this.router.navigateByUrl(`/menu/setting/3`);
   }
 
-  cerrarSesion(){
-    this.router.navigateByUrl('')
+  cerrarSesion() {
+    this.router.navigateByUrl('');
   }
-
 }

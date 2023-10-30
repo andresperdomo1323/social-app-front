@@ -1,30 +1,30 @@
-// import { Component, OnInit } from '@angular/core';
-// import { Socket } from 'ngx-socket-io';
+import { Component } from '@angular/core';
+import { SocketService } from 'src/app/services/socket.service';
 
-// @Component({
-//   selector: 'app-chat',
-//   templateUrl: './chat.component.html',
-//   styleUrls: ['./chat.component.css']
-// })
-// export class ChatComponent implements OnInit {
+@Component({
+  selector: 'app-chat',
+  templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.css']
+})
+export class ChatComponent {
+  text: string = '';
+  chat: any; 
 
-//   chat: { chats: any[] } = { chats: [] }; // Declarando chat como un objeto con la propiedad 'chats'
+  constructor(private socketService: SocketService) {
+    this.socketService.connect();
+    this.chat = {
+      chats: []
+    };
+  }
 
-//   text: string = '';
-
-//   constructor(private socket: Socket) {
-//     this.socket.connect();
-//   }
-
-//   ngOnInit(): void {
-//     // Lógica de inicialización si es necesaria
-//   }
-
-//   sendMessage() {
-//     if (this.text) {
-//       // Agrega la lógica para enviar el mensaje al servidor a través de sockets
-//       this.socket.emit('chat message', this.text);
-//       this.text = ''; // Limpia el campo de texto después de enviar el mensaje
-//     }
-//   }
-// }
+  sendMessage() {
+    if (this.text) {
+      this.socketService.sendMessage(this.text);
+      this.chat.chats.push({
+        text: this.text,
+        messageType: 1
+      });
+      this.text = '';
+    }
+  }
+}
