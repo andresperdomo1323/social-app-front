@@ -14,7 +14,9 @@ export class PublicationsComponent {
   mensaje: string = '';
   imagenes: string[] = [];
 
-  publicacionesForm: FormGroup = new FormGroup({})
+  publicacionesForm: FormGroup = this.form.group({
+    description:['']
+  })
 
   constructor(
     private router: Router,
@@ -43,7 +45,7 @@ export class PublicationsComponent {
   console.log(data);
   }
 
- 
+
 
 
   publicar() {

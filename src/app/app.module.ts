@@ -19,6 +19,7 @@ import { ProfileComponent } from './components/menu/profile/profile.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
 import { ChatComponent } from './components/menu/chat/chat.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
 
