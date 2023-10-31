@@ -1,0 +1,55 @@
+.toolbar-item-spacer {
+  flex: 1 1 auto;
+}
+
+.app-container {
+  height: 90%;
+  margin: 0;
+}
+
+.app-sidenav {
+  width: 100px;
+  background-color:#bce7b5e3;
+}
+
+.app-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-toolbar-admin{
+  background-color:#97B592;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: small;
+}
+
+.mat-icon {
+  font-size: 24px;
+}
+
+.mat-list-item {
+  margin-bottom: 50px;
+}
+
+.social-app{
+  width: 40%;
+}
+
+.logo-social{
+  display: grid;
+  width: 16%;
+}
+
+.logo{
+  width: 20%;
+  margin-left: 10%;
+}
