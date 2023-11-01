@@ -24,10 +24,7 @@ export class UsersService {
       return this.http.post<any>(`${this.url}/login`, { email, password });
     }
 
-    getById(id: string) {
-      return this.http.get<User>(`${this.url}/${id}`);
-    }
-
+   
     checkUsername(username: string): Observable<boolean> {
       return this.http.get<boolean>(this.url,{params:{username}});
     }
