@@ -14,9 +14,8 @@ export class ChatService {
   sendMessage(messageInfo: { text: string; messageType: number; }) {
     messageInfo.messageType = 2;
     this.chats.push(messageInfo);
-    this.socketService.sendAuthenticatedMessage("sendMessage", messageInfo);
+    this.socketService.sendMessage("sendMessage", messageInfo); // Utiliza el método sendMessage
   }
-
   onReceiveMessage() {
     this.socketService.socket.on("receiveMessage", (messageInfo: { text: string; messageType: number; }) => {
       this.chats.push(messageInfo);

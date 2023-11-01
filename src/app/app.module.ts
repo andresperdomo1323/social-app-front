@@ -32,7 +32,7 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     AdminComponent,
     ProfileComponent,
     NotificationComponent,
-    ChatComponent,
+    ChatComponent
   ],
 
   imports: [

@@ -14,7 +14,7 @@ import { MaterialModule } from 'src/app/core/material/material.module';
     CommonModule,
     ProfileRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
 
   ]
 })

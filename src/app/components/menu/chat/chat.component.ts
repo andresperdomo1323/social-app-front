@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SocketService } from 'src/app/services/socket.service';
 
 @Component({
@@ -6,20 +6,26 @@ import { SocketService } from 'src/app/services/socket.service';
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent {
+export class ChatComponent implements OnInit {
   text: string = '';
-  chat: any; 
+  chat: any;
 
   constructor(private socketService: SocketService) {
-    this.socketService.connect();
     this.chat = {
       chats: []
     };
   }
 
+  ngOnInit() {
+    const userToken = localStorage.getItem('token'); // Obtén el token del usuario autenticado
+    if (userToken) {
+      this.socketService.connectWithToken(userToken); // Conecta el chat con el token
+    }
+  }
+
   sendMessage() {
     if (this.text) {
-      this.socketService.sendMessage(this.text);
+      this.socketService.sendMessage("sendMessage", this.text);
       this.chat.chats.push({
         text: this.text,
         messageType: 1

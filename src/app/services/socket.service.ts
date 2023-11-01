@@ -12,16 +12,20 @@ export class SocketService {
   }
 
   connectWithToken(token: string) {
-    // Configurar los encabezados para incluir el token de autenticación
-    const headers = {
-      Authorization: `Bearer ${token}`
-    };
+    // Configura los encabezados para incluir el token de autenticación
+    const headers = { Authorization: `Bearer ${token}` };
 
-    // Conectar al servidor de chat con los encabezados configurados
-    this.socket.connect({ transportOptions: { polling: { extraHeaders: headers } });
+    // Crea una nueva instancia de Socket con los encabezados configurados
+    this.socket = new Socket({
+      url: this.socket.ioSocket._uri,
+      options: { extraHeaders: headers }
+    });
+
+    // Conecta el nuevo socket
+    this.socket.connect();
   }
 
-  sendMessage(message: string) {
-    this.socket.emit('sendMessage', message);
+  sendMessage(event: string, message: any) {
+    this.socket.emit(event, message);
   }
 }
