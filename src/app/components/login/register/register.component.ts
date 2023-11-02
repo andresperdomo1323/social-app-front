@@ -14,7 +14,8 @@ import { async, map, tap } from 'rxjs';
 export class RegisterComponent implements OnInit {
   submitted: boolean = false;
   userForm: FormGroup = new FormGroup({});
-
+  successMessage: string = '';
+  errorMessages: string[] = [];
 
 
   constructor(
@@ -33,43 +34,34 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // onSubmit(event: Event) {
-    // this.submitted = true;
-    // event.preventDefault();
-    // if(this.userForm.valid){
-    //   const { email, password, name, lastName, role, username } = this.userForm.value;
-
-    //   this.usersService.loginCreateFirebase(email, password)
-    //     .then((userCredential) => {
-    //       if (userCredential.user){
-    //         let user = {
-    //           uid: userCredential.user.uid,
-    //           name: name,
-    //           lastName: lastName,
-    //           username: username,
-    //           email: email,
-    //           password:  password,
-    //           role: role
-    //         };
-    //       }
-          // User registered successfully, now save the user in MongoDB
-
 
 
   onSubmit(event: Event) {
     this.submitted = true;
     event.preventDefault();
-    if(this.userForm.valid){
+    this.errorMessages = [];
+
+    if (this.userForm.valid) {
       const user = this.userForm.value;
-      this.usersService.createUser(user)
-      .subscribe((newUser: User) => {
-        console.log(newUser);
-        this.router.navigate(['/']);
-      })
+      this.usersService.createUser(user).subscribe(
+        (newUser: User) => {
+          this.successMessage = 'Registro exitoso';
+          setTimeout(() => {
+            this.router.navigate(['/']);
+          }, 3000);
+        },
+        (error) => {
+          console.log(error);
+          if (error.status === 400 && error.error.msg) {
+            this.errorMessages.push(error.error.msg);
+          } else {
+            this.errorMessages.push('El correo electrónico ya está registrado');
+          }
+        }
+      );
+    }else {
+      this.errorMessages.push('Por favor, complete todos los campos');
     }
-
-    this.userForm.reset();
-
   }
 
 
@@ -87,5 +79,3 @@ export class RegisterComponent implements OnInit {
   }
 
 }
-
-

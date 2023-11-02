@@ -21,11 +21,14 @@
           <p>Crea tu cuenta</p>
         </div>
 
-        <form [formGroup]="userForm" (ngSubmit)="onSubmit($event)" ng-reflect-form="[object Object]" auto>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit($event)"  ng-reflect-form="[object Object]">
           <div>
             <mat-form-field>
-              <input formControlName="name" placeholder="Nombre" matInput type="text" required>
+              <input formControlName="name" placeholder="Nombre" matInput type="text" required [class.error]="userForm.get('name')?.hasError('noContieneNumeros')"/>
               <mat-error *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched">El nombre es obligatorio.</mat-error>
+              <div *ngIf="userForm.get('name')?.hasError('noContieneNumeros')" class="error-message">
+                No se permiten números en el nombre.
+              </div>
             </mat-form-field>
             <mat-form-field>
               <input formControlName="lastName" placeholder="Apellido" matInput type="text" required>
@@ -36,9 +39,10 @@
               <mat-error *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">El correo es obligatorio.</mat-error>
               <mat-error *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched">El correo no es válido.</mat-error>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field >
               <input formControlName="username" placeholder="Nombre de usuario" matInput type="text" required>
               <mat-error *ngIf="userForm.get('username')?.hasError('required') && userForm.get('username')?.touched">El nombre de usuario es obligatorio.</mat-error>
+              <mat-error *ngIf="userForm.get('username')?.hasError('usernameExists') && userForm.get('username')?.touched">El nombre de usuario ya esta registrado</mat-error>
             </mat-form-field>
             <div class="inputFormDiv">
               <mat-form-field>
@@ -50,8 +54,14 @@
               </mat-form-field>
             </div>
           </div>
-        <button class= "boton-verde d-grid gap-2 col-6 mx-auto"> Registrarte </button>
+        <button type="submit" class= "boton-verde d-grid gap-2 col-6 mx-auto"> Registrarte </button>
       </form>
+      <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+      <div *ngIf="errorMessages.length > 0" class="error-message">
+        <div *ngFor="let errorMessage of errorMessages" class="no-bullet">
+          {{ errorMessage }}
+        </div>
+      </div>
       <div class="mt-2 condiciones">
         <p>
           Al hacer clic en "Registrarte", aceptas nuestras Condiciones, Política de privacidad y Política de cookies.

@@ -20,6 +20,7 @@
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .boton-verde:hover {
@@ -53,8 +54,24 @@
   border-color: red;
 }
 
+/* Estilo para el mensaje de éxito */
+.success-message {
+  background-color: green;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Estilo para el mensaje de error */
 .error-message {
-  color: red;
-  font-size: 12px;
-  margin-top: 5px;
+  background-color: red;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 5px;
 }
