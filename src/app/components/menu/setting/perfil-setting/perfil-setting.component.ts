@@ -20,6 +20,21 @@ export class PerfilSettingComponent {
   constructor(private formBuilder: FormBuilder, private router:Router) {}
 
   ngOnInit(): void {
+    const userData = localStorage.getItem('user');
 
+    if (userData) {
+      const userDataObj = JSON.parse(userData);
+
+      // Llena el formulario con los datos del usuario almacenados en el Local Storage
+      this.formS.setValue({
+        email: userDataObj.email,
+        password: '', // Aquí puedes dejarlo en blanco si no deseas mostrar la contraseña
+        name: userDataObj.name,
+        lastname: userDataObj.lastName,
+        username: userDataObj.username,
+        birthdate: '', // Asegúrate de que tengas un campo para la fecha de nacimiento en tu formulario
+        phone: '' // Asegúrate de que tengas un campo para el teléfono en tu formulario
+      });
+    }
   }
 }

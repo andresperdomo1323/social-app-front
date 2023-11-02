@@ -44,17 +44,19 @@ export class LoginComponent implements OnInit {
 
         const res = this.usersService.login(this.form.value)
         .subscribe((res: any) => {
-          console.log(res);
+          
+          const resStr = JSON.stringify(res.data);
+
+      localStorage.setItem('user', resStr);
           localStorage.setItem('token', res.token);
         });
-
+        this.router.navigateByUrl('/menu')
       }
     }
     this.form.reset();
   }
-  login(){
-    this.router.navigateByUrl('/menu')
-  }
+ 
+
   get fc() {
     return this.form.controls;
   }
