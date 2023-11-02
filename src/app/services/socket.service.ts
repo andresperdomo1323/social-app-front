@@ -12,16 +12,10 @@ export class SocketService {
   }
 
   connectWithToken(token: string) {
-    // Configura los encabezados para incluir el token de autenticación
     const headers = { Authorization: `Bearer ${token}` };
-
-    // Crea una nueva instancia de Socket con los encabezados configurados
-    this.socket = new Socket({
-      url: this.socket.ioSocket._uri,
-      options: { extraHeaders: headers }
-    });
-
-    // Conecta el nuevo socket
+    this.socket.ioSocket.io.opts.transportOptions = {
+      polling: { extraHeaders: headers }
+    };
     this.socket.connect();
   }
 

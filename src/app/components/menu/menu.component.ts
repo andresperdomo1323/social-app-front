@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/user.models';
 import { AuthGoogleService } from 'src/app/services/auth-google.service';
 
 
@@ -10,10 +11,10 @@ import { AuthGoogleService } from 'src/app/services/auth-google.service';
 })
 export class MenuComponent {
   chatOpen: boolean = true;
+
   // variable de año en curso
   year: any;
   today = new Date();
-  public user = this.getUser();
 
   constructor(private router: Router,
     private authGoogleService: AuthGoogleService) { }
@@ -58,28 +59,12 @@ export class MenuComponent {
 
   minimizeChat() {
     // Función para minimizar el chat
-    this.chatOpen = false;
+    this.chatOpen = !this.chatOpen;
   }
 
   closeChat() {
     // Función para cerrar el chat
     this.chatOpen = false;
-  }
-
-  getUser() {
-    const userData = localStorage.getItem('user');
-    let user;
-
-    if (userData) {
-      try {
-        user = JSON.parse(userData);
-      } catch (error) {
-        console.error('Error al analizar los datos de usuario desde localStorage:', error);
-        // Manejo de error: Puede ser útil para reiniciar o eliminar los datos incorrectos del localStorage
-      }
-    }
-
-    return user; // Devolverá el objeto 'user' o 'undefined' si hay algún error o no hay datos en localStorage
   }
 }
 

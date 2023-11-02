@@ -7,19 +7,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MaterialModule } from './core/material/material.module';
-import { LocationStrategy, PathLocationStrategy } from '@angular/common'; // Importa PathLocationStrategy
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MenuComponent } from './components/menu/menu.component';
 import { RegisterComponent } from './components/login/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProfileComponent } from './components/menu/profile/profile.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
 import { ChatComponent } from './components/menu/chat/chat.component';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { OAuthModule } from 'angular-oauth2-oidc';
+
 
 const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
 
@@ -32,7 +33,8 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     AdminComponent,
     ProfileComponent,
     NotificationComponent,
-    ChatComponent
+    ChatComponent,
+
   ],
 
   imports: [

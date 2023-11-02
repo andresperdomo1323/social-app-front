@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { SocketService } from './socket.service';
 
@@ -11,12 +12,18 @@ export class ChatService {
     this.onReceiveMessage();
   }
 
-  sendMessage(messageInfo: { text: string; messageType: number; }) {
-    messageInfo.messageType = 2;
-    this.chats.push(messageInfo);
-    this.socketService.sendMessage("sendMessage", messageInfo); // Utiliza el método sendMessage
+  sendMessage(messageText: string) {
+    const messageInfo = {
+      text: messageText,
+      messageType: 2
+    };
+
+
+    this.socketService.sendMessage("sendMessage", messageInfo);
   }
+
   onReceiveMessage() {
+
     this.socketService.socket.on("receiveMessage", (messageInfo: { text: string; messageType: number; }) => {
       this.chats.push(messageInfo);
     });

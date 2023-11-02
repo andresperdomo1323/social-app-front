@@ -87,8 +87,8 @@
 
     <div class="chat-tab" [ngClass]="{ 'open': chatOpen }">
       <div class="chat-tab-header">
-        <span>{{ user.username }}</span>
-        <button class="btn-minimize" (click)="minimizeChat()">_</button>
+        <button class="btn-minimize" (click)="minimizeChat()">-</button>
+        <span>Usuario2</span>
         <button class="btn-close" (click)="closeChat()">X</button>
       </div>
       <div class="chat-content">
@@ -102,6 +102,7 @@
       <div class="dropdown-menu">
       </div>
     </div>
+
     <section>
       <div>
         <router-outlet></router-outlet>
