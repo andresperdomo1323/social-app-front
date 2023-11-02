@@ -1,9 +1,12 @@
 <div class="container my-4 custom-container">
   <div class="row">
     <div class="col-md-4 photo d-flex flex-column align-items-center">
-  <img [src]="imageUrl" alt="Foto de perfil">
-        <input type="file" #fileInput (change)="onFileSelected($event)">
-        <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="uploadProfilePicture()">Cambiar Foto</button>
+      <div class="profile-image-container">
+        <img [src]="imageUrl" alt="Foto de perfil" class="rounded-image">
+      </div>
+      <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;">
+      <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="openFileInput()">Seleccionar archivo</button>
+      <button class="boton-verde d-grid gap-2 col-6 mx-auto mt-4" (click)="uploadProfilePicture()">Cambiar Foto</button>
     </div>
 
     <div class="col-md-8">

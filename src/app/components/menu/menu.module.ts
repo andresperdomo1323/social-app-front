@@ -6,8 +6,6 @@ import { CoreModule } from 'src/app/core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTabsModule } from '@angular/material/tabs';
 
-
-
 @NgModule({
   declarations: [
 

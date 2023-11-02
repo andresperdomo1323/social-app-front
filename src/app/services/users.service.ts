@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { environment } from '../../enviroments/environment';
 
 import { User } from '../models/user.models';
 import { Observable } from 'rxjs';
@@ -11,7 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class UsersService {
 
-	private BASE_URL = environment.apiUrl + 'api/users';
 
   private url = 'http://localhost:3000/api/users';
   private headerCustom: HttpHeaders = new HttpHeaders();
@@ -27,8 +25,8 @@ export class UsersService {
       return this.http.post<{ message: string }>('http://localhost:3000/api/users/verify', { email });
     }
 
-    login(form: any) {
-      return this.http.post<any>(`${this.url}/login`,form);
+    login(email: string, password: string): Observable<any> {
+      return this.http.post<any>(`${this.url}/login`, { email, password });
     }
 
     getById(id: string) {
@@ -40,6 +38,15 @@ export class UsersService {
     }
 
     getAllUsers(): Observable<User[]> {
-      return this.http.get<User[]>(`${this.BASE_URL}/getUsers`);
+      return this.http.get<User[]>(`${this.url}/getUsers`);
     }
+
+    getUserData(id:string): Observable<any> {
+      return this.http.get<any>(`${this.url}/${id}`);
+    }
+
+    updateUser(id:string, user:User): Observable<any> {
+      return this.http.put<any>(`${this.url}/${id}`, user);
+    }
+
 }

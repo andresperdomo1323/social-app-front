@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Form, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Publication } from 'src/app/models/publications.models';
+import { AuthGoogleService } from 'src/app/services/auth-google.service';
 import { PublicationsService } from 'src/app/services/publications.service';
 
 @Component({
@@ -13,12 +14,17 @@ export class PublicationsComponent {
   mensaje: string = '';
   imagenes: string[] = [];
 
-  publicacionesForm: FormGroup = new FormGroup({})
+  publicacionesForm: FormGroup = this.form.group({
+    description:['']
+  })
 
   constructor(
     private router: Router,
     private form: FormBuilder,
-    private publicationService: PublicationsService
+    private publicationService: PublicationsService,
+    private authGoogleService: AuthGoogleService
+
+
   ) { this.buildForm(); }
 
 
@@ -33,6 +39,14 @@ export class PublicationsComponent {
 
     }
   }
+
+  showData(){
+  const data = JSON.stringify(this.authGoogleService.getProfile())
+  console.log(data);
+  }
+
+
+
 
   publicar() {
     // implementar la lógica para enviar el mensaje y las imágenes al servidor.

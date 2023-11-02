@@ -102,6 +102,9 @@
     </div>
   </div>
   <div class="col-md-8 noticias">
+    <div>
+      <button type="button" class="btn btn-success" (click)="showData()">data</button>
+    </div>
     <!--publications -->
     <div class="divpublication">
       <form [formGroup]="publicacionesForm" (ngSubmit)="onSubmit($event)">
@@ -109,19 +112,19 @@
           <img src="/assets/imagenPerfil.jpg" class="avatarpubli">
           <textarea placeholder="¿En qué estas pensando?..." class="textarea"
             formControlName="description"></textarea>
-          <!-- <label for="fileInput" class="custom-file-upload" formControlName="content">
+          <label for="fileInput" class="custom-file-upload">
             Seleccionar archivo
           </label>
-          <input id="fileInput" type="file" (change)="onFileSelected($event)" accept="image/*" style="display: none;"> -->
+          <input id="fileInput" type="file" (change)="onFileSelected($event)" accept="image/*" style="display: none;">
           <button class="buttonpublicar">Publicar</button>
         </div>
 
-        <!-- <div *ngIf="imagenes.length > 0"> -->
-          <!-- <h4>Imágenes seleccionadas:</h4>
+        <div *ngIf="imagenes.length > 0">
+          <h4>Imágenes seleccionadas:</h4>
           <div *ngFor="let imagen of imagenes">
             <img [src]="imagen" alt="Imagen" class="imgpublica">
-          </div> -->
-        <!-- </div> -->
+          </div>
+        </div>
       </form>
     </div>
     <div class="noticiasPrincipales">

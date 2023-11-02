@@ -5,10 +5,20 @@
 //   providedIn: 'root'
 // })
 // export class SocketService {
-//   constructor(private socket: Socket) {}
+//   socket: Socket;
 
-//   connect() {
-//     this.socket.connect();
+//   constructor(private socketIO: Socket) {
+//     this.socket = socketIO;
+//   }
+
+//   connectWithToken(token: string) {
+//     // Configurar los encabezados para incluir el token de autenticación
+//     const headers = {
+//       Authorization: `Bearer ${token}`
+//     };
+
+//     // Conectar al servidor de chat con los encabezados configurados
+//     // this.socket.connect({ transportOptions: { polling: { extraHeaders: headers } });
 //   }
 
 //   sendMessage(message: string) {

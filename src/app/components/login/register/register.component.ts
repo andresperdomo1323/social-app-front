@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl, AsyncValidatorFn } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, AsyncValidatorFn  } from '@angular/forms';
 import { UsersService } from 'src/app/services/users.service';
 import { User } from '../../../models/user.models';
 import { Router } from '@angular/router';
-import { of, timer } from 'rxjs'; // Importa 'of' y 'timer' de 'rxjs'
-import { catchError, map, switchMap } from 'rxjs/operators'; // Importa 'catchError', 'map' y 'switchMap' de 'rxjs/operators'
-import { validateUsername } from 'src/app/validators/validator';
+import { async, map, tap } from 'rxjs';
 
 
 @Component({
@@ -15,107 +13,69 @@ import { validateUsername } from 'src/app/validators/validator';
 })
 export class RegisterComponent implements OnInit {
   submitted: boolean = false;
-  showEmailError: boolean = false;
   userForm: FormGroup = new FormGroup({});
+  successMessage: string = '';
+  errorMessages: string[] = [];
+
 
   constructor(
     private formBuilder: FormBuilder,
     private usersService: UsersService,
-    private router: Router
-  ) {
-    this.buildForm();
-  }
+    private router: Router,
 
-  emailValidator(control: AbstractControl): { [key: string]: boolean } | null {
-    const email = control.value;
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      return { emailInvalid: true };
+
+
+    ) {
+      this.buildForm();
     }
-    return null;
-  }
+
+
 
   ngOnInit(): void {
   }
 
+
+
   onSubmit(event: Event) {
     this.submitted = true;
     event.preventDefault();
+    this.errorMessages = [];
+
     if (this.userForm.valid) {
       const user = this.userForm.value;
-      this.usersService.createUser(user)
-        .subscribe((newUser: User) => {
-          console.log(newUser);
-          this.router.navigate(['./login']);
-        });
+      this.usersService.createUser(user).subscribe(
+        (newUser: User) => {
+          this.successMessage = 'Registro exitoso';
+          setTimeout(() => {
+            this.router.navigate(['/']);
+          }, 3000);
+        },
+        (error) => {
+          console.log(error);
+          if (error.status === 400 && error.error.msg) {
+            this.errorMessages.push(error.error.msg);
+          } else {
+            this.errorMessages.push('El correo electrónico ya está registrado');
+          }
+        }
+      );
+    }else {
+      this.errorMessages.push('Por favor, complete todos los campos');
     }
-
-    this.userForm.reset();
   }
 
-  emailAsyncValidator(): AsyncValidatorFn {
-    return (control: AbstractControl) => {
-      if (control.value && control.value.trim() !== '') {
-        return this.usersService.checkEmailExists(control.value).pipe(
-          map((response) => {
-            if (response.message === 'El correo electrónico ya está registrado') {
-              return { emailExists: true };
-            } else {
-              return null;
-            }
-          }),
-          catchError(() => of(null))
-        );
-      } else {
-        return of(null);
-      }
-    };
-}
 
-private buildForm() {
-  this.userForm = this.formBuilder.group({
-    name: ['', [Validators.required]],
-    lastName: ['', [Validators.required]],
-    email: [
-      '',
-      [Validators.required, Validators.email],
-      [this.emailAsyncValidator()],
-    ],
-    username: [
-      '',
-      [Validators.required],
-      [validateUsername(this.usersService)],
-    ],
-    password: ['', [Validators.required]],
-    role: ['user', [Validators.required]],
-  });
 
-  // Agrega una validación personalizada para el correo electrónico existente
-  this.userForm.get('email')?.setAsyncValidators(this.emailAsyncValidator());
 
-  // Agrega una validación personalizada para el correo electrónico no existente
-  this.userForm.get('email')?.setAsyncValidators(this.emailNotExistAsyncValidator());
-}
+  private buildForm() {
+    this.userForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email],],
+      username: ['', [Validators.required],],
+      password: ['', [Validators.required]],
+      role: ['user', [Validators.required]],
+    });
+  }
 
-emailNotExistAsyncValidator(): AsyncValidatorFn {
-  return (control: AbstractControl) => {
-    if (control.value && control.value.trim() !== '') {
-      return timer(300).pipe(
-        switchMap(() => {
-          return this.usersService.checkEmailExists(control.value).pipe(
-            map((response) => {
-              if (response.message === 'El correo electrónico ya está registrado') {
-                return { emailExists: true };
-              } else {
-                return null;
-              }
-            }),
-            catchError(() => of(null))
-          );
-        })
-      );
-    } else {
-      return of(null);
-    }
-  };
-}
 }

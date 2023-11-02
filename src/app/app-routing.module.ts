@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './components/menu/profile/profile.component';
-import { LoginComponent } from './components/login/login.component';
 // import { ChatComponent } from './components/menu/chat/chat.component';
+
 
 const routes: Routes = [
 
@@ -22,7 +22,7 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./components/menu/profile/profile.module').then(m => m.ProfileModule)
   },
-  { path: 'profile/:id', component: ProfileComponent }
+  { path: 'profile/:_id', component: ProfileComponent },
   // {
   //   path: 'chat',
   //   component: ChatComponent
@@ -33,4 +33,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
