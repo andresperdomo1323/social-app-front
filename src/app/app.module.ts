@@ -45,8 +45,8 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     HttpClientModule,
     MatButtonToggleModule,
     HttpClientModule,
+    
     OAuthModule.forRoot()
-
   ],
   providers: [
     {

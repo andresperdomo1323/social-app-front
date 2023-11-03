@@ -42,14 +42,14 @@ export class LoginComponent implements OnInit {
         const password = passwordControl.value;
 
 
-        const res = this.usersService.login(this.form.value)
-        .subscribe((res: any) => {
+      //   const res = this.usersService.login(this.form.value)
+      //   .subscribe((res: any) => {
           
-          const resStr = JSON.stringify(res.data);
+      //     const resStr = JSON.stringify(res.data);
 
-      localStorage.setItem('user', resStr);
-          localStorage.setItem('token', res.token);
-        });
+      // localStorage.setItem('user', resStr);
+      //     localStorage.setItem('token', res.token);
+      //   });
         this.router.navigateByUrl('/menu')
       }
     }
