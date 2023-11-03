@@ -14,15 +14,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { RegisterComponent } from './components/login/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { ProfileComponent } from './components/menu/profile/profile.component';
 import { NotificationComponent } from './components/menu/notification/notification.component';
-import { ChatComponent } from './components/menu/chat/chat.component';
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { OAuthModule } from 'angular-oauth2-oidc';
-
-
-const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
 
 @NgModule({
   declarations: [
@@ -33,8 +28,7 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     AdminComponent,
     ProfileComponent,
     NotificationComponent,
-    ChatComponent,
-
+    // ChatComponent,
   ],
 
   imports: [
@@ -43,7 +37,7 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
     BrowserAnimationsModule,
     CoreModule,
     FormsModule,
-    SocketIoModule.forRoot(config),
+    // SocketIoModule.forRoot(config),
     ReactiveFormsModule,
     MatInputModule,
     MaterialModule,
@@ -57,8 +51,9 @@ const config: SocketIoConfig = { url: 'ws://localhost:3000', options: {} };
   providers: [
     {
       provide: LocationStrategy,
-      useClass: PathLocationStrategy,
+      useClass: PathLocationStrategy
     }
+
   ],
   bootstrap: [AppComponent]
 })
