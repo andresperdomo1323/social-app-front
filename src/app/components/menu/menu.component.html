@@ -84,11 +84,15 @@
         </ul>
       </div>
     </div>
-    <div class="dropup-center dropup " style="position: fixed; bottom: 24px; right: 17em; z-index: 99; ">
-      <button class="btn-flotante chat" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Juan
-      </button>
-      <div class="dropdown-menu dropName">
+
+    <div class="chat-tab" [ngClass]="{ 'open': chatOpen }">
+      <div class="chat-tab-header">
+        <button class="btn-minimize" (click)="minimizeChat()">-</button>
+        <span>Usuario2</span>
+        <button class="btn-close" (click)="closeChat()">X</button>
+      </div>
+      <div class="chat-content">
+        <app-chat *ngIf="chatOpen"></app-chat>
       </div>
     </div>
     <div class="dropup-center dropup" style="position: fixed; bottom: 24px; right: 0; z-index: 99;">
@@ -98,6 +102,7 @@
       <div class="dropdown-menu">
       </div>
     </div>
+
     <section>
       <div>
         <router-outlet></router-outlet>

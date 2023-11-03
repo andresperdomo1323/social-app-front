@@ -1,30 +1,33 @@
-// import { Component } from '@angular/core';
-// // import { SocketService } from 'src/app/services/socket.service';
+import { Component, OnInit } from '@angular/core';
+import { ChatService } from 'src/app/services/chat.service';
 
-// @Component({
-//   selector: 'app-chat',
-//   templateUrl: './chat.component.html',
-//   styleUrls: ['./chat.component.css']
-// })
-// export class ChatComponent {
-//   text: string = '';
-//   chat: any;
+@Component({
+  selector: 'app-chat',
+  templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.css']
+})
+export class ChatComponent implements OnInit {
+  text: string = '';
+  chat: any;
 
-//   constructor(private socketService: SocketService) {
-//     this.socketService.connect();
-//     this.chat = {
-//       chats: []
-//     };
-//   }
+  constructor(private chatService: ChatService) {
+    this.chat = {
+      chats: []
+    };
+  }
 
-//   sendMessage() {
-//     if (this.text) {
-//       this.socketService.sendMessage(this.text);
-//       this.chat.chats.push({
-//         text: this.text,
-//         messageType: 1
-//       });
-//       this.text = '';
-//     }
-//   }
-// }
+  ngOnInit() {
+
+  }
+
+  sendMessage() {
+    if (this.text) {
+      this.chatService.sendMessage(this.text);
+      this.chat.chats.push({
+        text: this.text,
+        messageType: 1
+      });
+      this.text = '';
+    }
+  }
+}

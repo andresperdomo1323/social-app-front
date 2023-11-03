@@ -65,5 +65,20 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('/register')
   }
 
+  async signInWithGoogle() {
+
+    (await this.authGoogleService.signInWithGoogle())
+      .subscribe(
+        response => {
+          // Aquí puedes manejar la respuesta del backend
+          console.log(response);
+        },
+        error => {
+          // Manejar error
+        }
+      );
+
+  }
+
 
 }

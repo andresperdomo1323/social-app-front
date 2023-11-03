@@ -1,27 +1,25 @@
-// import { Injectable } from '@angular/core';
-// import { Socket } from 'ngx-socket-io';
+import { Injectable } from '@angular/core';
+import { Socket } from 'ngx-socket-io';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class SocketService {
-//   socket: Socket;
+@Injectable({
+  providedIn: 'root'
+})
+export class SocketService {
+  socket: Socket;
 
-//   constructor(private socketIO: Socket) {
-//     this.socket = socketIO;
-//   }
+  constructor(private socketIO: Socket) {
+    this.socket = socketIO;
+  }
 
-//   connectWithToken(token: string) {
-//     // Configurar los encabezados para incluir el token de autenticación
-//     const headers = {
-//       Authorization: `Bearer ${token}`
-//     };
+  connectWithToken(token: string) {
+    const headers = { Authorization: `Bearer ${token}` };
+    this.socket.ioSocket.io.opts.transportOptions = {
+      polling: { extraHeaders: headers }
+    };
+    this.socket.connect();
+  }
 
-//     // Conectar al servidor de chat con los encabezados configurados
-//     // this.socket.connect({ transportOptions: { polling: { extraHeaders: headers } });
-//   }
-
-//   sendMessage(message: string) {
-//     this.socket.emit('sendMessage', message);
-//   }
-// }
+  sendMessage(event: string, message: any) {
+    this.socket.emit(event, message);
+  }
+}

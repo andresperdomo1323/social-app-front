@@ -1,4 +1,5 @@
 export interface User {
+  id: number;
   _id: string;
   name: string;
   lastName: string;
@@ -7,8 +8,12 @@ export interface User {
   password: string;
   role: string;
   dateBirth?: Date;
-  phone?: string;
+  phone?: number;
   avatar?: string;
+}
+
+export interface updateUser{
+
 }
 
 

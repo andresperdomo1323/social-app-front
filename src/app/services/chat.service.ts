@@ -1,25 +1,31 @@
-// import { Injectable } from '@angular/core';
-// import { SocketService } from './socket.service';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class ChatService {
-//   chats: { text: string; messageType: number; }[] = [];
+import { Injectable } from '@angular/core';
+import { SocketService } from './socket.service';
 
-//   constructor(private socketService: SocketService) {
-//     this.onReceiveMessage();
-//   }
+@Injectable({
+  providedIn: 'root'
+})
+export class ChatService {
+  chats: { text: string; messageType: number; }[] = [];
 
-//   sendMessage(messageInfo: { text: string; messageType: number; }) {
-//     messageInfo.messageType = 2;
-//     this.chats.push(messageInfo);
-//     this.socketService.sendAuthenticatedMessage("sendMessage", messageInfo);
-//   }
+  constructor(private socketService: SocketService) {
+    this.onReceiveMessage();
+  }
 
-//   onReceiveMessage() {
-//     this.socketService.socket.on("receiveMessage", (messageInfo: { text: string; messageType: number; }) => {
-//       this.chats.push(messageInfo);
-//     });
-//   }
-// }
+  sendMessage(messageText: string) {
+    const messageInfo = {
+      text: messageText,
+      messageType: 2
+    };
+
+
+    this.socketService.sendMessage("sendMessage", messageInfo);
+  }
+
+  onReceiveMessage() {
+
+    this.socketService.socket.on("receiveMessage", (messageInfo: { text: string; messageType: number; }) => {
+      this.chats.push(messageInfo);
+    });
+  }
+}

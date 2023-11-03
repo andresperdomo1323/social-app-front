@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/user.models';
 import { AuthGoogleService } from 'src/app/services/auth-google.service';
 
 
@@ -10,6 +11,7 @@ import { AuthGoogleService } from 'src/app/services/auth-google.service';
 })
 export class MenuComponent {
   chatOpen: boolean = true;
+
   // variable de año en curso
   year: any;
   today = new Date();
@@ -57,7 +59,7 @@ export class MenuComponent {
 
   minimizeChat() {
     // Función para minimizar el chat
-    this.chatOpen = false;
+    this.chatOpen = !this.chatOpen;
   }
 
   closeChat() {
