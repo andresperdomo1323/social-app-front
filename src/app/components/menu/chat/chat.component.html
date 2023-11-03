@@ -1,14 +1,13 @@
-<!-- <div class="Container">
-<div class="chatContainer">
-  <p [ngClass]="{'local': message.messageType === 1, 'remoto': message.messageType === 2}"
-  *ngFor="let message of chat.chats">{{message.text}}</p>
-</div>
+<div class="Container">
+  <div class="chatContainer">
+    <p [ngClass]="{'local': message.messageType === 1, 'remoto': message.messageType === 2}"
+      *ngFor="let message of chat.chats">{{message.text}}</p>
+  </div>
 
-<div class="inputContainer">
-  <form (submit)="sendMessage()">
-    <input [(ngModel)]="text" [ngModelOptions]="{standalone:true}" type="text" placeholder="Escribe un mensaje...">
-    <button class="btn btn-success btnenviar" type="submit"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i></button>
-  </form>
+  <div class="inputContainer">
+    <form (submit)="sendMessage()">
+      <input [(ngModel)]="text" [ngModelOptions]="{standalone:true}" type="text" placeholder="Escribe un mensaje...">
+      <button class="btn btnenviar" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+    </form>
+  </div>
 </div>
-</div>
- -->

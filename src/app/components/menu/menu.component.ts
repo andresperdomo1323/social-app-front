@@ -10,7 +10,10 @@ import { AuthGoogleService } from 'src/app/services/auth-google.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  chatOpen: boolean = true;
+  chatOpen = false;
+
+ 
+
 
   // variable de año en curso
   year: any;
@@ -63,9 +66,6 @@ export class MenuComponent {
   }
 
   closeChat() {
-    // Función para cerrar el chat
     this.chatOpen = false;
   }
 }
-
-
