@@ -36,25 +36,24 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       const emailControl = this.form.get('email');
       const passwordControl = this.form.get('password');
-
+  
       if (emailControl && passwordControl) {
         const email = emailControl.value;
         const password = passwordControl.value;
-
-
-      //   const res = this.usersService.login(this.form.value)
-      //   .subscribe((res: any) => {
-          
-      //     const resStr = JSON.stringify(res.data);
-
-      // localStorage.setItem('user', resStr);
-      //     localStorage.setItem('token', res.token);
-      //   });
-        this.router.navigateByUrl('/menu')
+  
+        const res = this.usersService.login(email, password) // Pasa el email y la contraseña como argumentos
+          .subscribe((res: any) => {
+            const resStr = JSON.stringify(res.data);
+  
+            localStorage.setItem('user', resStr);
+            localStorage.setItem('token', res.token);
+          });
+        this.router.navigateByUrl('/menu');
       }
     }
     this.form.reset();
   }
+  
  
 
   get fc() {
